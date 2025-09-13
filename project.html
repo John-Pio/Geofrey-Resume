@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Geofrey</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="container project-container">
+            <!-- Project content will be dynamically inserted here by JavaScript -->
+            <div id="project-detail-content">
+                <!-- Fallback content if project fails to load -->
+                <div class="page-header">
+                    <h1 id="project-title">Loading Project...</h1>
+                </div>
+                <p>If the project does not load, please return to the work page and try again.</p>
+                <a href="work.html" class="btn btn-primary">Back to Work</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
