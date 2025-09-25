@@ -143,7 +143,7 @@ The platform features a dynamic homepage that loads games from the database, cat
 By blending reverse bullet hell roguelike mechanics with Java programming puzzles, the game transforms coding lessons into an interactive adventure. 
 Players battle enemies using melee and ranged combat while solving real Java challenges to progress, upgrade skills, and unlock new content.
 
-The projectâ€™s mission is to bridge the gap between traditional teaching methods and the immersive world of gaming â€” making programming concepts 
+The project's mission is to bridge the gap between traditional teaching methods and the immersive world of gaming. Making programming concepts 
 more accessible, intuitive, and fun. With instant feedback, skill progression, and offline play, ProGamer RPG offers a unique way to reinforce 
 Java fundamentals while keeping students motivated.`,
         gallery: [{
@@ -608,4 +608,5 @@ function closeBrowserModal() {
 
 // Make sure these new functions are accessible globally
 window.openBrowserModal = openBrowserModal;
+
 window.closeBrowserModal = closeBrowserModal;
