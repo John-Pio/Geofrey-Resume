@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProGamer RPG - Geofrey Gapasin</title>
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-header {
+            padding: 2rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+        }
+
+        .game-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .game-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .back-button:hover {
+            background: rgba(78, 205, 196, 0.2);
+            border-color: #4ecdc4;
+            transform: translateY(-2px);
+        }
+
+        .game-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .game-frame {
+            display: block; /* Added for consistent block behavior */
+            margin: 0 auto; /* Added to center the iframe horizontally */
+            width: 100%;
+            max-width: 1200px;
+            height: auto; /* Changed from 700px to be responsive */
+            aspect-ratio: 16 / 9; /* Added to maintain the game's shape */
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: #000;
+        }
+
+        .game-info {
+            text-align: center;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .controls-hint {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .loading-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            /* Removed fixed height from here */
+            
+            .game-title {
+                font-size: 2rem;
+            }
+            
+            .game-container {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Removed fixed height from here */
+            
+            .game-header {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-header">
+        <h1 class="game-title">ProGamer RPG</h1>
+        <p class="game-subtitle">Survival Java Programming Puzzle Game</p>
+        <a href="project.html?id=project-three" class="back-button">← Back to Project Details</a>
+    </div>
+
+    <div class="game-container">
+        <div style="position: relative; width: 100%;">
+            <div class="loading-message" id="loadingMessage">
+                Loading game... Please wait
+            </div>
+            <iframe 
+                class="game-frame" 
+                src="https://itch.io/embed-upload/12144797?color=333333"
+                allowfullscreen
+                onload="document.getElementById('loadingMessage').style.display='none'">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="game-info">
+        <p class="controls-hint">Use WASD or arrow keys to move • Click to attack • Follow on-screen instructions for coding challenges</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">Best experienced in fullscreen mode</p>
+    </div>
+
+    <script>
+        // Remove loading message after iframe loads
+        setTimeout(() => {
+            const loadingMessage = document.getElementById('loadingMessage');
+            if (loadingMessage) {
+                loadingMessage.style.display = 'none';
+            }
+        }, 5000); // Fallback in case onload doesn't fire
+    </script>
+</body>
+</html>

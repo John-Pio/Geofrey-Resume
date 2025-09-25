@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details</title>
+    <title>Project Details - Geofrey Gapasin</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav id="navbar">
         <div class="container">
@@ -22,19 +24,98 @@
     </nav>
 
     <div class="main-content">
-        <div class="container project-container">
-            <!-- Project content will be dynamically inserted here by JavaScript -->
-            <div id="project-detail-content">
-                <!-- Fallback content if project fails to load -->
-                <div class="page-header">
-                    <h1 id="project-title">Loading Project...</h1>
+        <div class="container">
+            <!-- Enhanced Project Hero Section -->
+            <div class="project-hero" id="project-hero">
+                <img class="project-hero-bg" id="hero-bg" alt="Project Hero">
+                <div class="project-hero-content">
+                    <h1 class="project-title" id="project-title">Loading...</h1>
+                    <p class="project-subtitle" id="project-subtitle">Please wait while we load the project details.</p>
+                    <div class="project-meta-inline" id="project-meta-inline">
+                        <!-- Meta badges will be inserted here -->
+                    </div>
                 </div>
-                <p>If the project does not load, please return to the work page and try again.</p>
-                <a href="work.html" class="btn btn-primary">Back to Work</a>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="project-content">
+                <!-- Main Content -->
+                <div class="project-main">
+                    <div id="project-description">
+                        <!-- Description will be inserted here -->
+                    </div>
+
+                    <div class="media-gallery" id="media-gallery">
+                        <h2 class="section-title">Gallery</h2>
+                        <div class="gallery-grid" id="gallery-grid">
+                            <!-- Gallery items will be inserted here -->
+                        </div>
+                    </div>
+
+                    <div id="demo-section" class="demo-container" style="display: none;">
+                        <h2 class="section-title">Live Demo</h2>
+                        <iframe id="demo-iframe" class="demo-iframe"></iframe>
+                    </div>
+
+                    <div id="features-section">
+                        <h2 class="section-title">Key Features</h2>
+                        <ul class="features-list" id="features-list">
+                            <!-- Features will be inserted here -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="project-sidebar">
+                    <h3 class="section-title">Project Details</h3>
+
+                    <div class="stats-grid" id="stats-grid">
+                        <!-- Stats will be inserted here -->
+                    </div>
+
+                    <h4 style="margin: 2rem 0 1rem 0; color: #4ecdc4;">Technologies Used</h4>
+                    <div class="tech-stack" id="tech-stack">
+                        <!-- Tech tags will be inserted here -->
+                    </div>
+
+                    <div class="project-links" id="project-links">
+                        <!-- Project links will be inserted here -->
+                    </div>
+                    <a href="work.html" class="btn btn-secondary"
+                        style="width: 100%; justify-content: center; margin-top: 2rem;">
+                        &larr; Back to Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div class="modal" id="gallery-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img id="modal-image" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+    </div>
+
+    <div class="modal" id="browser-modal">
+        <div class="modal-content browser-view">
+            <div class="browser-header">
+                <div class="browser-dots">
+                    <span class="browser-dot" style="background:#ff5f56;"></span>
+                    <span class="browser-dot" style="background:#ffbd2e;"></span>
+                    <span class="browser-dot" style="background:#27c93f;"></span>
+                </div>
+                <div class="browser-address">example.com</div>
+                <button class="modal-close" onclick="closeBrowserModal()">&times;</button>
+            </div>
+            <div class="modal-viewport">
+                <img id="browser-modal-image" alt="Website Preview">
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -160,15 +160,13 @@
     </div>
 
     <script>
-        // Email reveal functionality
         document.getElementById('emailDisplay').addEventListener('click', function() {
-            const email = 'geofrey.gapasin' + '@' + 'gmail.com'; // Basic obfuscation
+            const email = 'geofreygapasin' + '@' + 'gmail.com';
             this.textContent = email;
             this.style.cursor = 'text';
             this.style.userSelect = 'text';
         });
 
-        // Form submission with validation
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
