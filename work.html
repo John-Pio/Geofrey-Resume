@@ -7,81 +7,92 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav id="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">Geofrey</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+<nav id="navbar">
+    <div class="container">
+        <div class="nav-content">
+            <div class="logo">Geofrey</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="main-content">
+    <div class="container">
+        <div class="page-header">
+            <h1>My Portfolio</h1>
+            <p>A selection of projects showcasing web development, design, and technical solutions.</p>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+            <!-- Project 5 - Lead Generation (NEW - Featured) -->
+            <div class="portfolio-item featured">
+                <img src="img/lead-gen-thumbnail.png" alt="Lead Generation Platform">
+                <div class="portfolio-info">
+                    <div class="featured-badge">New</div>
+                    <h3>Lead Generation Platform</h3>
+                    <p>Full-stack platform with React frontend, Laravel backend, admin dashboard, and bulk user registration from Excel.</p>
+                    <a href="project.html?id=project-five" class="btn btn-secondary">View Details</a>
+                </div>
+            </div>
+
+            <!-- Project 1 -->
+            <div class="portfolio-item">
+                <img src="img/CafeVox.png" alt="AI Chat Landing Page">
+                <div class="portfolio-info">
+                    <h3>CafeVox: Discovery Platform</h3>
+                    <p>Major feature enhancement with discovery system, public/private profiles, and UI/UX overhaul.</p>
+                    <a href="project.html?id=project-one" class="btn btn-secondary">View Details</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio-item">
+                <img src="img/PatingGames-Thumb.png" alt="Online Games Platform">
+                <div class="portfolio-info">
+                    <h3>PatingGames Web Portal</h3>
+                    <p>Database-driven games platform with PHP, MySQL, and real-time search functionality.</p>
+                    <a href="project.html?id=project-two" class="btn btn-secondary">View Details</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="portfolio-item">
+                <img src="img/ProGamer-Thumb.png" alt="2D Roguelike Game">
+                <div class="portfolio-info">
+                    <h3>ProGamer RPG</h3>
+                    <p>Educational game blending roguelike mechanics with Java programming puzzles for students.</p>
+                    <a href="project.html?id=project-three" class="btn btn-secondary">View Details</a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="portfolio-item">
+                <img src="img/Tabletop-Thumb.png" alt="Tabletop Game Manual">
+                <div class="portfolio-info">
+                    <h3>Pest Exterminator: Tabletop Game</h3>
+                    <p>Original tabletop game with custom rules, character design, and comprehensive instruction manual.</p>
+                    <a href="project.html?id=project-four" class="btn btn-secondary">View Details</a>
+                </div>
             </div>
         </div>
-    </nav>
 
-    <div class="main-content">
-        <div class="container">
-            <div class="page-header">
-                <h1>My Portfolio</h1>
-                <p>A selection of projects showcasing web development, design, and technical solutions.</p>
-            </div>
-
-            <!-- Portfolio Grid -->
-            <div class="portfolio-grid">
-                <!-- Project 1 -->
-                <div class="portfolio-item">
-                    <img src="img/CafeVox.png" alt="AI Chat Landing Page">
-                    <div class="portfolio-info">
-                        <h3>AI Chat Landing Page</h3>
-                        <p>AI Chat Landing Page focusing on modern responsive design and improved UX.</p>
-                        <a href="project.html?id=project-one" class="btn btn-secondary">View Details</a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="portfolio-item">
-                    <img src="img/PatingGames-Thumb.png" alt="Online Games Platform">
-                    <div class="portfolio-info">
-                        <h3>Online Games Platform</h3>
-                        <p>A modern responsive online html5 games platform</p>
-                        <a href="project.html?id=project-two" class="btn btn-secondary">View Details</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="portfolio-item">
-                    <img src="img/ProGamer-Thumb.png" alt="2D Roguelike Game">
-                    <div class="portfolio-info">
-                        <h3>2D Roguelike Game</h3>
-                        <p>Unity-based 2D Roguelike programming game with custom code puzzles.</p>
-                        <a href="project.html?id=project-three" class="btn btn-secondary">View Details</a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="portfolio-item">
-                    <img src="img/Tabletop-Thumb.png" alt="Tabletop Game Manual">
-                    <div class="portfolio-info">
-                        <h3>Tabletop Game Manual</h3>
-                        <p>An Editorial Design for a Tabletop Game</p>
-                        <a href="project.html?id=project-four" class="btn btn-secondary">View Details</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Call to Action -->
-            <div class="portfolio-cta">
-                <div class="section-card" style="text-align: center; margin-top: 4rem; gap: 20px;">
-                    <h2>Ready to Work Together?</h2>
-                    <p style="margin-bottom: 20px;">I'm currently available for freelance projects and full-time opportunities.</p>
-                    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-                </div>
+        <!-- Call to Action -->
+        <div class="portfolio-cta">
+            <div class="section-card" style="text-align: center; margin-top: 4rem; gap: 20px;">
+                <h2>Ready to Work Together?</h2>
+                <p style="margin-bottom: 20px;">I'm currently available for freelance projects and full-time opportunities.</p>
+                <a href="contact.html" class="btn btn-primary">Get In Touch</a>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
