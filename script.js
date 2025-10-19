@@ -12,9 +12,9 @@ const projectData = {
 
     The primary challenge was integrating these complex features seamlessly into the existing single-page application, enhancing user engagement without disrupting core functionality. This overhaul successfully laid the foundation for future analytics, social interactions, and advanced content management, significantly increasing the platform's value.`,
         gallery: [{
-                url: 'img/Explore-Page.png',
-                caption: 'Redesigned Explore & Discovery page with dynamic content sections'
-            },
+            url: 'img/Explore-Page.png',
+            caption: 'Redesigned Explore & Discovery page with dynamic content sections'
+        },
             {
                 url: 'img/Public-Profile.png',
                 caption: 'Public user profile page with character showcase and sharing'
@@ -47,9 +47,9 @@ const projectData = {
             'JSON'
         ],
         stats: [{
-                label: 'New API Endpoints',
-                value: '6'
-            },
+            label: 'New API Endpoints',
+            value: '6'
+        },
             {
                 label: 'Major Features Added',
                 value: '3'
@@ -79,10 +79,10 @@ const projectData = {
 The platform features a dynamic homepage that loads games from the database, categorizes them for easy browsing, and includes a real-time search function. The system also includes a simple content management feature, allowing new games to be added through a web form, which handles data and image thumbnail uploads directly to the server and database. The front-end is enhanced with JavaScript for features like a persistent dark/light mode toggle and a responsive mobile navigation menu.`,
         gallery: [{
 
-                url: 'img/patinggames-full.png',
-                caption: 'Homepage Screenshot - Scroll to explore!',
-                type: 'browser'
-            },
+            url: 'img/patinggames-full.png',
+            caption: 'Homepage Screenshot - Scroll to explore!',
+            type: 'browser'
+        },
             {
                 url: 'img/Game-Page.png',
                 caption: 'Individual game page with an embedded iframe player.',
@@ -112,9 +112,9 @@ The platform features a dynamic homepage that loads games from the database, cat
             'CSS3'
         ],
         stats: [{
-                label: 'Core PHP Pages',
-                value: '3'
-            },
+            label: 'Core PHP Pages',
+            value: '3'
+        },
             {
                 label: 'Key Features',
                 value: '8'
@@ -147,9 +147,9 @@ The project's mission is to bridge the gap between traditional teaching methods 
 more accessible, intuitive, and fun. With instant feedback, skill progression, and offline play, ProGamer RPG offers a unique way to reinforce 
 Java fundamentals while keeping students motivated.`,
         gallery: [{
-                url: 'img/ProGamer-Combat.png',
-                caption: 'Melee and ranged combat in action'
-            },
+            url: 'img/ProGamer-Combat.png',
+            caption: 'Melee and ranged combat in action'
+        },
             {
                 url: 'img/ProGamer-Code-Challenge.png',
                 caption: 'In-game Java programming puzzle'
@@ -178,9 +178,9 @@ Java fundamentals while keeping students motivated.`,
             'Git'
         ],
         stats: [{
-                label: 'Levels',
-                value: '10+'
-            },
+            label: 'Levels',
+            value: '10+'
+        },
             {
                 label: 'Puzzle Types',
                 value: '4'
@@ -215,10 +215,10 @@ Java fundamentals while keeping students motivated.`,
 The primary focus of this portfolio piece is the 8-page instructional manual, designed to be clear, engaging, and visually consistent with the game's theme. The challenge was to present complex rules, character stats, and setup instructions in an easily digestible format for new players. The project combines strategic game design with clean editorial layout, custom illustrations, and cohesive branding.`,
 
         gallery: [{
-                url: "img/Tabletop-Game-Components.png",
-                caption: "Overview of all game components and figures",
-                type: 'browser'
-            },
+            url: "img/Tabletop-Game-Components.png",
+            caption: "Overview of all game components and figures",
+            type: 'browser'
+        },
             {
                 url: "img/Tabletop-Game-Cards.png",
                 caption: "A selection of player action cards",
@@ -247,9 +247,9 @@ The primary focus of this portfolio piece is the 8-page instructional manual, de
         technologies: ["Adobe Illustrator", "Adobe Photoshop"],
 
         stats: [{
-                label: "Manual Pages",
-                value: "8"
-            },
+            label: "Manual Pages",
+            value: "8"
+        },
             {
                 label: "Total Components",
                 value: "150+"
@@ -267,28 +267,104 @@ The primary focus of this portfolio piece is the 8-page instructional manual, de
         }, ],
 
         demoUrl: null
+    },
+    "project-five": {
+        title: "Lead Generation Landing Page",
+        subtitle: "Full-stack lead-generation platform with integrated quiz system, bulk user registration, and admin dashboard.",
+        image: "img/lead-gen-thumbnail.png",
+        category: "Full-Stack Development",
+        date: "October 2025",
+        duration: "2 Weeks",
+        client: "Personal Project",
+        status: "Completed",
+        description: `A comprehensive full-stack lead-generation landing page built to demonstrate modern web development skills. The platform combines a sleek fintech-themed frontend with a robust Laravel backend, featuring an intelligent quiz system, bulk user registration from Excel files, and a powerful admin dashboard.
+
+The project showcases the ability to architect and implement complex systems from conception to deployment, including database design, API development, authentication flows, and frontend-backend integration. The dark hacker aesthetic with neon green accents creates an engaging user experience while the efficient backend ensures scalability and performance.
+
+Key achievements include implementing real-time data validation, secure bulk operations, and detailed success/failure reporting systems that provide actionable feedback to administrators.`,
+        gallery: [{
+            url: "img/lead-gen-landing.png",
+            caption: "Landing page with multi-step quiz interface",
+            type: 'browser'
+        },
+            {
+                url: "img/lead-gen-admin-dashboard.png",
+                caption: "Admin dashboard with leads management and statistics",
+                type: 'browser'
+            },
+            {
+                url: "img/lead-gen-bulk-registration.png",
+                caption: "Bulk user registration with Excel parsing and validation",
+                type: 'browser'
+            },
+            {
+                url: "img/lead-gen-quiz.png",
+                caption: "Interactive multi-step quiz with progress tracking",
+                type: 'browser'
+            }
+        ],
+        features: [
+            "Multi-step interactive quiz with real-time validation",
+            "Excel file upload and parsing with SheetJS",
+            "Editable preview table with row-by-row validation feedback",
+            "Duplicate detection for emails and usernames (frontend and database)",
+            "Bulk user registration with automatic password generation",
+            "Secure admin authentication with Laravel Sanctum tokens",
+            "Protected routes and role-based access control",
+            "Real-time lead statistics and dashboard analytics",
+            "Detailed success/failure reporting for bulk operations",
+            "Responsive dark fintech theme with neon accents",
+            "Database duplicate checking and conflict resolution",
+            "User CRUD operations with extended registration fields"
+        ],
+        technologies: [
+            "React 18",
+            "React Router DOM",
+            "Laravel 12",
+            "PHP 8.2",
+            "MySQL 8.0",
+            "Laravel Sanctum",
+            "SheetJS (XLSX)",
+            "JavaScript ES6+",
+            "CSS3"
+        ],
+        stats: [{
+            label: "API Endpoints",
+            value: "10+"
+        },
+            {
+                label: "React Components",
+                value: "4"
+            },
+            {
+                label: "Database Tables",
+                value: "4"
+            },
+            {
+                label: "Lines of Code",
+                value: "2000+"
+            }
+        ],
+        demoUrl: null
     }
 };
+
 // Wait for the DOM to be fully loaded before running scripts
 document.addEventListener('DOMContentLoaded', () => {
     // --- Enhanced Dynamic Project Page Loader ---
-    // This code runs only if we are on the project.html page with enhanced layout
     const projectHero = document.getElementById('project-hero');
     if (projectHero) {
         loadEnhancedProject();
         initializeGallery();
     }
     // --- Original Dynamic Project Page Loader ---
-    // This code runs for the simple project.html layout
     const projectDetailContent = document.getElementById('project-detail-content');
     if (projectDetailContent && !projectHero) {
         const urlParams = new URLSearchParams(window.location.search);
         const projectId = urlParams.get('id');
         const project = projectData[projectId];
         if (project) {
-            // Update the page title
             document.title = project.title + ' - Geofrey Gapasin';
-            // Create the HTML content (original simple layout)
             projectDetailContent.innerHTML = `
                 <div class="page-header">
                     <h1>${ project.title }</h1>
@@ -322,7 +398,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
         } else {
-            // If project ID is not found
             projectDetailContent.innerHTML = `
                 <div class="page-header">
                     <h1>Project Not Found</h1>
@@ -332,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
     }
-    // 1. Navbar scroll effect
+    // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     if (navbar) {
         window.addEventListener('scroll', () => {
@@ -343,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    // 2. Active Page Highlighter
+    // Active Page Highlighter
     const navLinks = document.querySelectorAll('.nav-links a');
     const currentPage = window.location.pathname.split('/').pop();
     navLinks.forEach(link => {
@@ -352,7 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active-nav');
         }
     });
-    // 3. Scroll-triggered animations for cards
+    // Scroll-triggered animations for cards
     const animatedElements = document.querySelectorAll('.section-card, .contact-card, .stat-item, .portfolio-item');
     if (animatedElements.length > 0) {
         const observer = new IntersectionObserver(entries => {
@@ -373,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(el);
         });
     }
-    // 4. Contact Form Logic
+    // Contact Form Logic
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
@@ -387,7 +462,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
-            // Simulate form submission
             setTimeout(() => {
                 alert("Thank you for your message! I'll get back to you soon.");
                 contactForm.reset();
@@ -397,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-// --- Enhanced Project Loading Functions ---
+
 function loadEnhancedProject() {
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('id');
@@ -406,7 +480,6 @@ function loadEnhancedProject() {
         showProjectNotFound();
         return;
     }
-    // ... (the top part of the function remains the same) ...
     document.title = project.title + ' - Geofrey Gapasin';
     const heroBg = document.getElementById('hero-bg');
     const projectTitle = document.getElementById('project-title');
@@ -431,13 +504,10 @@ function loadEnhancedProject() {
         `;
     }
 
-    // UPDATED GALLERY LOGIC
     const galleryGrid = document.getElementById('gallery-grid');
     if (galleryGrid && project.gallery) {
         galleryGrid.innerHTML = project.gallery.map((item) => {
-            // Check if the item has the special 'browser' type
             if (item.type === 'browser') {
-                // If so, make the onclick call the new browser modal function
                 return `
                     <div class="gallery-item" onclick="openBrowserModal('${item.url}')">
                         <img src="${item.url}" alt="${item.caption}">
@@ -447,7 +517,6 @@ function loadEnhancedProject() {
                     </div>
                 `;
             } else {
-                // Otherwise, use the original image modal
                 return `
                     <div class="gallery-item" onclick="openModal('${item.url}')">
                         <img src="${item.url}" alt="${item.caption}">
@@ -536,8 +605,6 @@ function showProjectNotFound() {
 }
 
 function initializeGallery() {
-    // Gallery modal functionality is handled by openModal/closeModal functions
-    // Close modal when clicking outside
     const modal = document.getElementById('gallery-modal');
     if (modal) {
         modal.addEventListener('click', e => {
@@ -549,44 +616,23 @@ function initializeGallery() {
 }
 
 function openModal(imageSrc) {
-
     const modal = document.getElementById('gallery-modal');
-
     const modalImage = document.getElementById('modal-image');
-
     if (modal && modalImage) {
-
         modalImage.src = imageSrc;
-
         modal.classList.add('active');
-
     }
-
 }
 
 function closeModal() {
-
     const modal = document.getElementById('gallery-modal');
-
     if (modal) {
-
         modal.classList.remove('active');
-
     }
-
 }
 
 window.openModal = openModal;
-
 window.closeModal = closeModal;
-
-
-const modal = document.getElementById("gameModal");
-
-const closeBtn = document.querySelector(".close");
-
-const gameFrame = document.getElementById("gameFrame");
-
 
 function openBrowserModal(imageSrc) {
     const modal = document.getElementById('browser-modal');
@@ -594,7 +640,6 @@ function openBrowserModal(imageSrc) {
     if (modal && modalImage) {
         modalImage.src = imageSrc;
         modal.classList.add('active');
-        // Reset scroll to the top every time it's opened
         modal.querySelector('.modal-viewport').scrollTop = 0;
     }
 }
@@ -606,7 +651,5 @@ function closeBrowserModal() {
     }
 }
 
-// Make sure these new functions are accessible globally
 window.openBrowserModal = openBrowserModal;
-
 window.closeBrowserModal = closeBrowserModal;
