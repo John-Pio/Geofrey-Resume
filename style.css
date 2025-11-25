@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Poppins:wght@600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+
 /* Universal Styles & Body */
 * {
     margin: 0;
@@ -46,6 +48,7 @@ nav.scrolled {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(45deg, #4CAF50, #66BB6A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -101,6 +104,7 @@ nav.scrolled {
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 800;
     margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(45deg, #ccd6f6, #81C784);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -135,6 +139,7 @@ nav.scrolled {
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 800;
     line-height: 1.1;
+    font-family: 'Playfair Display', serif;
 }
 
 .hero .subtitle {
@@ -295,6 +300,7 @@ nav.scrolled {
 .section-title, .contact-title {
     font-size: 1.8rem;
     font-weight: 700;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 1.5rem;
     background: linear-gradient(45deg, #81C784, #66BB6A);
     -webkit-background-clip: text;
@@ -334,7 +340,7 @@ nav.scrolled {
     box-shadow: 0 0 8px rgba(102, 187, 106, 0.3);
 }
 
-.experience-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; color: #ccd6f6; }
+.experience-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; font-family: 'Poppins', sans-serif; color: #ccd6f6; }
 .experience-company { color: #81C784; font-weight: 500; margin-bottom: 0.5rem; }
 .experience-date { opacity: 0.7; font-size: 0.9rem; margin-bottom: 1rem; color: #8892b0; }
 .experience-description { opacity: 0.9; color: #8892b0; }
@@ -351,6 +357,7 @@ nav.scrolled {
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
     border: 1px solid rgba(76, 175, 80, 0.2);
     transition: all 0.3s ease;
     color: #ccd6f6;
@@ -396,7 +403,7 @@ nav.scrolled {
 /* --- Contact Page Specifics --- */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 4rem; }
 .form-group { margin-bottom: 1.5rem; }
-.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: #ccd6f6; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; font-family: 'Poppins', sans-serif; color: #ccd6f6; }
 .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 1rem; border: 2px solid rgba(76, 175, 80, 0.15); border-radius: 10px; background: rgba(10, 25, 47, 0.6); color: #ccd6f6; font-size: 1rem; transition: all 0.3s ease; }
 .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: #66BB6A; background: rgba(10, 25, 47, 0.8); box-shadow: 0 0 15px rgba(76, 175, 80, 0.15); }
 .form-group textarea { resize: vertical; min-height: 120px; }
@@ -405,7 +412,7 @@ nav.scrolled {
 .contact-info-item { display: flex; align-items: center; margin-bottom: 2rem; padding: 1rem; background: rgba(17, 34, 64, 0.6); border-radius: 15px; transition: all 0.3s ease; border: 1px solid rgba(76, 175, 80, 0.15); }
 .contact-info-item:hover { background: rgba(17, 34, 64, 0.8); transform: translateX(5px); border-color: rgba(76, 175, 80, 0.25); }
 .contact-icon { width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(45deg, #4CAF50, #66BB6A); display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0; }
-.contact-details h4 { color: #81C784; }
+.contact-details h4 { color: #81C784; font-family: 'Poppins', sans-serif; }
 .social-links { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
 .social-link { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(10, 25, 47, 0.6); border-radius: 25px; color: #ccd6f6; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(76, 175, 80, 0.2); }
 .social-link:hover { background: rgba(76, 175, 80, 0.1); transform: translateY(-2px); border-color: #66BB6A; }
@@ -461,6 +468,7 @@ nav.scrolled {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-weight: 700;
+    font-family: 'Poppins', sans-serif;
     color: #ccd6f6;
 }
 
@@ -501,7 +509,7 @@ nav.scrolled {
     border-bottom: 1px solid rgba(76, 175, 80, 0.15);
 }
 
-.header-content {
+.header-content { 
     display: grid;
     grid-template-columns: 150px 1fr;
     gap: 2rem;
@@ -512,21 +520,14 @@ nav.scrolled {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(45deg, #4CAF50, #66BB6A);
     border: 4px solid #66BB6A;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #0a192f;
     box-shadow: 0 10px 30px rgba(76, 175, 80, 0.15);
-}
-
-.header-info h1 {
+    object-fit: cover;
+}.header-info h1 {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
     color: #ccd6f6;
 }
 
@@ -649,6 +650,7 @@ nav.scrolled {
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
     font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
     color: #8892b0;
     font-weight: 500;
     border: 1px solid rgba(76, 175, 80, 0.15);
@@ -677,6 +679,7 @@ nav.scrolled {
     color: #ccd6f6;
     margin-bottom: 1rem;
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
 
 .skills-list {
@@ -730,6 +733,7 @@ nav.scrolled {
 
 .assessment-title {
     font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
     color: #8892b0;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
@@ -739,6 +743,7 @@ nav.scrolled {
 .assessment-value {
     font-size: 1.5rem;
     font-weight: 700;
+    font-family: 'Poppins', sans-serif;
     color: #81C784;
     margin-bottom: 0.5rem;
 }
@@ -770,6 +775,7 @@ nav.scrolled {
 
 .trait-name {
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     color: #ccd6f6;
 }
 
@@ -840,6 +846,7 @@ nav.scrolled {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
     margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
     background: linear-gradient(45deg, #ccd6f6, #81C784);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -958,6 +965,7 @@ nav.scrolled {
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
     border: 1px solid rgba(76, 175, 80, 0.2);
     transition: all 0.3s ease;
     color: #ccd6f6;
@@ -1264,7 +1272,7 @@ nav.scrolled {
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .project-hero { height: 50vh; min-height: 300px; }
     .header-content { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
-    .profile-image { width: 120px; height: 120px; font-size: 2.5rem; margin: 0 auto; }
+    .profile-image { width: 120px; height: 120px; margin: 0 auto; object-fit: cover; }
     .resume-body { padding: 2rem; }
     .experience-header { flex-direction: column; align-items: start; gap: 0.5rem; }
 }
