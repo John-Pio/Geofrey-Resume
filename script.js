@@ -349,6 +349,45 @@ Key achievements include implementing real-time data validation, secure bulk ope
     }
 };
 
+const adCreativeData = [
+    {
+        title: 'Ad Creative',
+        src: 'img/GraphicPortfolio/Ad Creative/ad.png'
+    },
+    {
+        title: 'Dress 1',
+        src: 'img/GraphicPortfolio/Ad Creative/Dress 1.png'
+    },
+    {
+        title: 'Sneaker 1',
+        src: 'img/GraphicPortfolio/Ad Creative/Sneaker 1 new.png'
+    },
+    {
+        title: 'Shoe 2',
+        src: 'img/GraphicPortfolio/Ad Creative/Shoe 2 new.png'
+    },
+    {
+        title: 'Shoe 4',
+        src: 'img/GraphicPortfolio/Ad Creative/Shoe 4.png'
+    }
+];
+
+const apparelData = [
+    { title: 'Awesome Copy',          src: 'img/GraphicPortfolio/Transparent/Awesome copy.png' },
+    { title: 'Awesome Preview',       src: 'img/GraphicPortfolio/Transparent/Awesome_Preview.png' },
+    { title: 'Brief Affirmation',     src: 'img/GraphicPortfolio/Transparent/BriefAffirmation Transparent shadow.png' },
+    { title: 'Fantastic',             src: 'img/GraphicPortfolio/Transparent/Fantastic.png' },
+    { title: 'Fishing Time',          src: 'img/GraphicPortfolio/Transparent/FishingTime.png' },
+    { title: 'Happy Sun',             src: 'img/GraphicPortfolio/Transparent/HappySun Transparent.png' },
+    { title: 'Nice',                  src: 'img/GraphicPortfolio/Transparent/Nice.png' },
+    { title: 'Pastel Sunset',         src: 'img/GraphicPortfolio/Transparent/Pastel Sunset.png' },
+    { title: 'Shrimp Fried Rice',     src: 'img/GraphicPortfolio/Transparent/Shrimp Fried Rice.png' },
+    { title: 'Vintage Sarcasm',       src: 'img/GraphicPortfolio/Transparent/VintageSarcasm transparent2.png' },
+    { title: 'aRIEEES',               src: 'img/GraphicPortfolio/Transparent/aRIEEES.png' },
+    { title: 'Believer',              src: 'img/GraphicPortfolio/Transparent/believer 2.png' },
+    { title: 'Tralalelo Tralala',     src: 'img/GraphicPortfolio/Transparent/tralalelo tralala.png' }
+];
+
 // Wait for the DOM to be fully loaded before running scripts
 document.addEventListener('DOMContentLoaded', () => {
     // --- Enhanced Dynamic Project Page Loader ---
@@ -356,6 +395,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (projectHero) {
         loadEnhancedProject();
         initializeGallery();
+    }
+    // --- Graphic Design: Ad Creatives ---
+    const adCreativeGrid = document.getElementById('ad-creative-grid');
+    if (adCreativeGrid) {
+        renderAdCreativeGrid(adCreativeGrid);
+        initializeAdZoomModal();
+    }
+    // --- Graphic Design: Apparel / Transparent Designs ---
+    const apparelGrid = document.getElementById('apparel-grid');
+    if (apparelGrid) {
+        renderApparelGrid(apparelGrid);
+        initializeApparelModal();
     }
     // --- Original Dynamic Project Page Loader ---
     const projectDetailContent = document.getElementById('project-detail-content');
@@ -428,7 +479,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     // Scroll-triggered animations for cards
-    const animatedElements = document.querySelectorAll('.section-card, .contact-card, .stat-item, .portfolio-item');
+    const animatedElements = document.querySelectorAll('.section-card, .contact-card, .stat-item, .portfolio-item, .ad-creative-card');
     if (animatedElements.length > 0) {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -471,6 +522,100 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function renderAdCreativeGrid(grid) {
+    grid.innerHTML = adCreativeData.map((item, index) => {
+        const safeSrc = encodeURI(item.src);
+        const title = item.title || `Ad Creative ${ index + 1 }`;
+        return `
+            <button class="ad-creative-card" type="button" data-src="${ safeSrc }" data-title="${ title }">
+                <span class="ad-creative-image">
+                    <img src="${ safeSrc }" alt="${ title } ad creative" loading="lazy">
+                </span>
+                <span class="ad-creative-meta">
+                    <span class="ad-creative-title">${ title }</span>
+                </span>
+            </button>
+        `;
+    }).join('');
+
+    const cards = grid.querySelectorAll('.ad-creative-card');
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            openAdZoomModal(card.dataset.src, card.dataset.title);
+        });
+    });
+}
+
+function initializeAdZoomModal() {
+    const modal = document.getElementById('ad-zoom-modal');
+    const zoomRange = document.getElementById('ad-zoom-range');
+    if (!modal || !zoomRange) return;
+
+    modal.addEventListener('click', event => {
+        if (event.target.id === 'ad-zoom-modal') {
+            closeAdZoomModal();
+        }
+    });
+
+    zoomRange.addEventListener('input', () => {
+        updateAdZoom(parseFloat(zoomRange.value));
+    });
+
+    const zoomButtons = modal.querySelectorAll('.zoom-btn');
+    zoomButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const direction = button.dataset.zoom;
+            const step = 0.1;
+            const min = parseFloat(zoomRange.min);
+            const max = parseFloat(zoomRange.max);
+            let nextValue = parseFloat(zoomRange.value) + (direction === 'in' ? step : -step);
+            nextValue = Math.max(min, Math.min(max, nextValue));
+            zoomRange.value = nextValue.toFixed(1);
+            updateAdZoom(nextValue);
+        });
+    });
+}
+
+function openAdZoomModal(imageSrc, title) {
+    const modal = document.getElementById('ad-zoom-modal');
+    const image = document.getElementById('ad-zoom-image');
+    const titleElement = document.getElementById('ad-zoom-title');
+    const zoomRange = document.getElementById('ad-zoom-range');
+
+    if (!modal || !image || !zoomRange) return;
+
+    const safeTitle = title || 'Ad Creative';
+    image.src = imageSrc;
+    image.alt = `${ safeTitle } ad creative`;
+    if (titleElement) {
+        titleElement.textContent = safeTitle;
+    }
+
+    zoomRange.value = '1';
+    updateAdZoom(1);
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeAdZoomModal() {
+    const modal = document.getElementById('ad-zoom-modal');
+    if (modal) {
+        modal.classList.remove('active');
+    }
+    document.body.style.overflow = '';
+}
+
+function updateAdZoom(value) {
+    const image = document.getElementById('ad-zoom-image');
+    const zoomValue = document.getElementById('ad-zoom-value');
+    if (image) {
+        image.style.transform = `scale(${ value })`;
+    }
+    if (zoomValue) {
+        zoomValue.textContent = `${ Math.round(value * 100) }%`;
+    }
+}
 
 function loadEnhancedProject() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -653,3 +798,130 @@ function closeBrowserModal() {
 
 window.openBrowserModal = openBrowserModal;
 window.closeBrowserModal = closeBrowserModal;
+
+window.openAdZoomModal = openAdZoomModal;
+window.closeAdZoomModal = closeAdZoomModal;
+
+// ─── Apparel / Transparent Designs ────────────────────────────────────────────
+
+function renderApparelGrid(grid) {
+    grid.innerHTML = apparelData.map((item, index) => {
+        const safeSrc = encodeURI(item.src);
+        const title = item.title || `Design ${index + 1}`;
+        return `
+            <button class="ad-creative-card apparel-card" type="button" data-src="${safeSrc}" data-title="${title}">
+                <span class="ad-creative-image apparel-thumb">
+                    <img src="${safeSrc}" alt="${title} apparel design" loading="lazy">
+                </span>
+                <span class="ad-creative-meta">
+                    <span class="ad-creative-title">${title}</span>
+                </span>
+            </button>
+        `;
+    }).join('');
+
+    grid.querySelectorAll('.apparel-card').forEach(card => {
+        card.addEventListener('click', () => {
+            openApparelModal(card.dataset.src, card.dataset.title);
+        });
+    });
+}
+
+let _apparelColor = '#111111';
+
+function initializeApparelModal() {
+    const modal = document.getElementById('apparel-modal');
+    const zoomRange = document.getElementById('apparel-zoom-range');
+    if (!modal || !zoomRange) return;
+
+    // Close on backdrop click
+    modal.addEventListener('click', e => {
+        if (e.target.id === 'apparel-modal') closeApparelModal();
+    });
+
+    zoomRange.addEventListener('input', () => {
+        updateApparelZoom(parseFloat(zoomRange.value));
+    });
+
+    const zoomButtons = modal.querySelectorAll('.zoom-btn');
+    zoomButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const direction = button.dataset.zoom;
+            const step = 0.1;
+            const min = parseFloat(zoomRange.min);
+            const max = parseFloat(zoomRange.max);
+            let nextValue = parseFloat(zoomRange.value) + (direction === 'in' ? step : -step);
+            nextValue = Math.max(min, Math.min(max, nextValue));
+            zoomRange.value = nextValue.toFixed(1);
+            updateApparelZoom(nextValue);
+        });
+    });
+
+    // Color buttons
+    modal.querySelectorAll('.color-button').forEach(button => {
+        button.addEventListener('click', () => {
+            _apparelColor = button.dataset.color;
+            const name = button.dataset.name || '';
+            _applyApparelColor();
+            // Update active state
+            modal.querySelectorAll('.color-button').forEach(b => b.classList.remove('active'));
+            button.classList.add('active');
+            const nameEl = document.getElementById('apparel-color-name');
+            if (nameEl) nameEl.textContent = name;
+        });
+    });
+}
+
+function openApparelModal(imageSrc, title) {
+    const modal = document.getElementById('apparel-modal');
+    const image = document.getElementById('apparel-zoom-image');
+    const titleEl = document.getElementById('apparel-zoom-title');
+    const zoomRange = document.getElementById('apparel-zoom-range');
+    if (!modal || !image) return;
+
+    image.src = imageSrc;
+    image.alt = `${title || 'Design'} apparel preview`;
+    if (titleEl) titleEl.textContent = title || 'Design';
+
+    if (zoomRange) {
+        zoomRange.value = '1';
+        updateApparelZoom(1);
+    }
+
+    // Pre-select Black
+    _apparelColor = '#111111';
+    _applyApparelColor();
+    modal.querySelectorAll('.color-button').forEach(b => b.classList.remove('active'));
+    const blackButton = modal.querySelector('.color-button[data-color="#111111"]');
+    if (blackButton) blackButton.classList.add('active');
+    const nameEl = document.getElementById('apparel-color-name');
+    if (nameEl) nameEl.textContent = 'Black';
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeApparelModal() {
+    const modal = document.getElementById('apparel-modal');
+    if (modal) modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function updateApparelZoom(value) {
+    const image = document.getElementById('apparel-zoom-image');
+    const zoomValue = document.getElementById('apparel-zoom-value');
+    if (image) {
+        image.style.transform = `scale(${value})`;
+    }
+    if (zoomValue) {
+        zoomValue.textContent = `${Math.round(value * 100)}%`;
+    }
+}
+
+function _applyApparelColor() {
+    const area = document.getElementById('apparel-preview-area');
+    if (area) area.style.backgroundColor = _apparelColor;
+}
+
+window.openApparelModal = openApparelModal;
+window.closeApparelModal = closeApparelModal;
