@@ -1522,7 +1522,7 @@ nav.scrolled {
 
 /* ─── Apparel Card thumbnail variant ─────────────────────────────────────── */
 .apparel-thumb {
-    background: #111111;
+    background: #f5f0e0;
     transition: background-color 0.3s ease;
 }
 

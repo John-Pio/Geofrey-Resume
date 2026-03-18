@@ -369,6 +369,18 @@ const adCreativeData = [
     {
         title: 'Shoe 4',
         src: 'img/GraphicPortfolio/Ad Creative/Shoe 4.png'
+    },
+    {
+        title: 'Faux Article',
+        src: 'img/GraphicPortfolio/Ad Creative/Faux Article.png'
+    },
+    {
+        title: 'Phone',
+        src: 'img/GraphicPortfolio/Ad Creative/Phone.png'
+    },
+    {
+        title: 'Teeth',
+        src: 'img/GraphicPortfolio/Ad Creative/Teeth.png'
     }
 ];
 
@@ -827,7 +839,7 @@ function renderApparelGrid(grid) {
     });
 }
 
-let _apparelColor = '#111111';
+let _apparelColor = '#f5f0e0';
 
 function initializeApparelModal() {
     const modal = document.getElementById('apparel-modal');
@@ -888,14 +900,14 @@ function openApparelModal(imageSrc, title) {
         updateApparelZoom(1);
     }
 
-    // Pre-select Black
-    _apparelColor = '#111111';
+    // Pre-select Beige
+    _apparelColor = '#f5f0e0';
     _applyApparelColor();
     modal.querySelectorAll('.color-button').forEach(b => b.classList.remove('active'));
-    const blackButton = modal.querySelector('.color-button[data-color="#111111"]');
-    if (blackButton) blackButton.classList.add('active');
+    const beigeButton = modal.querySelector('.color-button[data-color="#f5f0e0"]');
+    if (beigeButton) beigeButton.classList.add('active');
     const nameEl = document.getElementById('apparel-color-name');
-    if (nameEl) nameEl.textContent = 'Black';
+    if (nameEl) nameEl.textContent = 'Beige/Cream';
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
