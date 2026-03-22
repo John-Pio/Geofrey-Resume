@@ -36,7 +36,7 @@
 
             <div class="subsection-header">
                 <h3 class="subsection-title">Ad Creatives</h3>
-                <p class="subsection-subtitle">Click any design to zoom in like an online shop preview.</p>
+                <p class="subsection-subtitle">Each card includes a feed-style placement preview. Click any creative to inspect the mockup and the raw asset side by side.</p>
             </div>
 
             <div class="graphic-grid" id="ad-creative-grid">
@@ -129,19 +129,37 @@
 
 <!-- Ad Creative Zoom Modal -->
 <div class="modal" id="ad-zoom-modal">
-    <div class="modal-content zoom-modal">
+    <div class="modal-content zoom-modal ad-preview-modal">
         <button class="modal-close" type="button" onclick="closeAdZoomModal()">&times;</button>
-        <div class="zoom-media">
-            <img id="ad-zoom-image" alt="Ad Creative Preview">
-        </div>
-        <div class="zoom-toolbar">
-            <div class="zoom-title" id="ad-zoom-title">Ad Creative</div>
-            <div class="zoom-controls">
-                <button class="zoom-btn" type="button" data-zoom="out" aria-label="Zoom out">-</button>
-                <input class="zoom-range" id="ad-zoom-range" type="range" min="1" max="2.5" step="0.1" value="1" aria-label="Zoom level">
-                <button class="zoom-btn" type="button" data-zoom="in" aria-label="Zoom in">+</button>
-                <span class="zoom-value" id="ad-zoom-value">100%</span>
-            </div>
+        <div class="ad-modal-layout">
+            <section class="ad-modal-panel">
+                <div class="ad-modal-heading">
+                    <p class="ad-modal-eyebrow">Feed Placement Preview</p>
+                    <h3 class="zoom-title" id="ad-zoom-title">Ad Creative</h3>
+                    <p class="ad-modal-note">A custom social-feed mockup for portfolio presentation, not a recreation of Facebook itself.</p>
+                </div>
+                <div class="ad-preview-stage">
+                    <div id="ad-preview-card-container"></div>
+                </div>
+            </section>
+
+            <section class="ad-modal-panel">
+                <div class="ad-modal-heading ad-modal-heading-inline">
+                    <div>
+                        <p class="ad-modal-eyebrow">Raw Creative Asset</p>
+                        <p class="ad-modal-note">Zoom the exported design to inspect composition, type, and detail.</p>
+                    </div>
+                    <div class="zoom-controls">
+                        <button class="zoom-btn" type="button" data-zoom="out" aria-label="Zoom out">-</button>
+                        <input class="zoom-range" id="ad-zoom-range" type="range" min="1" max="2.5" step="0.1" value="1" aria-label="Zoom level">
+                        <button class="zoom-btn" type="button" data-zoom="in" aria-label="Zoom in">+</button>
+                        <span class="zoom-value" id="ad-zoom-value">100%</span>
+                    </div>
+                </div>
+                <div class="zoom-media ad-asset-viewer">
+                    <img id="ad-zoom-image" alt="Ad Creative Preview">
+                </div>
+            </section>
         </div>
     </div>
 </div>
@@ -199,6 +217,9 @@
         </div>
     </div>
 </div>
+<script src="data/graphicData.js"></script>
+<script src="modules/graphicDesign.js"></script>
+<script src="ui.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

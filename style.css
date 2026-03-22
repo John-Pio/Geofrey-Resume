@@ -474,8 +474,9 @@ nav.scrolled {
 
 .graphic-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
+    align-items: start;
 }
 
 .ad-creative-card {
@@ -502,6 +503,247 @@ nav.scrolled {
 .ad-creative-card:focus-visible {
     outline: 2px solid #81C784;
     outline-offset: 3px;
+}
+
+.ad-feed-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.ad-feed-preview {
+    display: block;
+    margin: 0.9rem;
+    border-radius: 18px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #fbfdff 0%, #eef4fd 100%);
+    border: 1px solid rgba(18, 35, 61, 0.08);
+    box-shadow: 0 18px 36px rgba(5, 14, 29, 0.18);
+    position: relative;
+}
+
+.ad-feed-preview-compact {
+    display: flex;
+    flex-direction: column;
+}
+
+.ad-feed-preview::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: var(--ad-accent, #66BB6A);
+}
+
+.ad-feed-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1rem 0.85rem;
+}
+
+.ad-feed-preview-compact .ad-feed-header {
+    align-items: flex-start;
+}
+
+.ad-feed-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--ad-accent, #66BB6A);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    flex-shrink: 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1) inset;
+}
+
+.ad-feed-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+    flex: 1;
+}
+
+.ad-feed-page {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #12233d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ad-feed-sponsored {
+    font-size: 0.69rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #657791;
+}
+
+.ad-feed-badge {
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(18, 35, 61, 0.08);
+    color: #365075;
+    font-size: 0.68rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.ad-feed-preview-compact .ad-feed-badge {
+    margin-left: auto;
+    font-size: 0.62rem;
+}
+
+.ad-feed-copy {
+    display: block;
+    padding: 0 1rem;
+    margin-bottom: 0.95rem;
+    color: #24344d;
+    line-height: 1.5;
+    font-size: 0.92rem;
+}
+
+.ad-feed-preview-compact .ad-feed-copy {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: calc(1.5em * 3);
+}
+
+.ad-feed-media {
+    display: block;
+    background: #dde6f5;
+}
+
+.ad-feed-preview-compact .ad-feed-media {
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    padding: 0.35rem;
+    background: linear-gradient(180deg, #eff4fb 0%, #e2ebf8 100%);
+}
+
+.ad-feed-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.ad-feed-preview-compact .ad-feed-media img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.ad-feed-link-block {
+    display: block;
+    padding: 0.9rem 1rem;
+    background: rgba(241, 245, 252, 0.92);
+    border-top: 1px solid rgba(18, 35, 61, 0.08);
+}
+
+.ad-feed-domain {
+    display: block;
+    margin-bottom: 0.45rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    color: #6c7b91;
+}
+
+.ad-feed-link-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.ad-feed-headline {
+    flex: 1;
+    color: #12233d;
+    font-size: 0.96rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.ad-feed-preview-compact .ad-feed-headline {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: calc(1.35em * 2);
+}
+
+.ad-feed-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.58rem 0.88rem;
+    border-radius: 999px;
+    background: #1a2538;
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.ad-feed-engagement {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding: 0.8rem 1rem 1rem;
+    border-top: 1px solid rgba(18, 35, 61, 0.08);
+    color: #6c7b91;
+    font-size: 0.76rem;
+}
+
+.ad-feed-engagement span {
+    white-space: nowrap;
+}
+
+.ad-feed-card .ad-creative-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.15rem 1.1rem 1.2rem;
+}
+
+.ad-creative-meta-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+}
+
+.ad-creative-detail {
+    font-size: 0.82rem;
+    color: #8892b0;
+    line-height: 1.45;
+}
+
+.ad-creative-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    color: #81C784;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .ad-creative-image {
@@ -558,6 +800,7 @@ nav.scrolled {
     gap: 1rem;
     background: rgba(10, 25, 47, 0.98);
     padding: 1.5rem;
+    overflow: hidden;
 }
 
 .modal-content.zoom-modal .modal-close {
@@ -573,6 +816,99 @@ nav.scrolled {
     justify-content: center;
 }
 
+.modal-content.ad-preview-modal {
+    width: min(94vw, 1260px);
+    max-height: calc(100vh - 3rem);
+}
+
+.ad-modal-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.25rem;
+    flex: 1 1 auto;
+    min-height: 0;
+    align-items: stretch;
+}
+
+.ad-modal-panel {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.2rem;
+    border-radius: 18px;
+    background: rgba(17, 34, 64, 0.72);
+    border: 1px solid rgba(76, 175, 80, 0.15);
+    min-height: 0;
+    overflow: hidden;
+}
+
+.ad-modal-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.ad-modal-heading-inline {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.ad-modal-eyebrow {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #81C784;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.ad-modal-note {
+    color: #8892b0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    max-width: 44ch;
+}
+
+.ad-preview-stage {
+    flex: 1;
+    padding: 1.25rem;
+    border-radius: 16px;
+    border: 1px solid rgba(76, 175, 80, 0.12);
+    background: linear-gradient(180deg, rgba(216, 230, 255, 0.08), rgba(145, 168, 201, 0.04));
+    overflow: auto;
+    min-height: 0;
+}
+
+#ad-preview-card-container {
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#ad-preview-card-container .ad-feed-preview {
+    margin: 0;
+}
+
+.ad-feed-preview-expanded .ad-feed-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 1.05rem;
+}
+
+.ad-feed-preview-expanded .ad-feed-page {
+    font-size: 1rem;
+}
+
+.ad-feed-preview-expanded .ad-feed-copy {
+    font-size: 0.96rem;
+}
+
+.ad-feed-preview-expanded .ad-feed-cta {
+    padding: 0.7rem 1rem;
+}
+
 .zoom-media {
     flex: 1;
     background: rgba(17, 34, 64, 0.8);
@@ -583,6 +919,12 @@ nav.scrolled {
     justify-content: center;
     overflow: auto;
     padding: 1rem;
+    min-height: 0;
+}
+
+.ad-asset-viewer {
+    min-height: 0;
+    max-height: none;
 }
 
 #ad-zoom-image {
@@ -591,6 +933,7 @@ nav.scrolled {
     transform-origin: center;
     transition: transform 0.2s ease;
     will-change: transform;
+    margin: auto;
 }
 
 .zoom-toolbar {
@@ -640,6 +983,49 @@ nav.scrolled {
     text-align: right;
     font-family: 'JetBrains Mono', monospace;
     color: #8892b0;
+}
+
+@media (max-width: 960px) {
+    .modal {
+        padding: 1rem;
+    }
+
+    .ad-modal-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content.ad-preview-modal {
+        max-height: calc(100vh - 2rem);
+        overflow: auto;
+    }
+
+    .ad-modal-heading-inline {
+        flex-direction: column;
+    }
+
+    .ad-asset-viewer {
+        min-height: 320px;
+        max-height: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .graphic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ad-feed-link-row {
+        flex-direction: column;
+    }
+
+    .ad-feed-cta {
+        width: 100%;
+    }
+
+    .ad-feed-card .ad-creative-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 /* --- Portfolio Grid (Work Page) --- */
@@ -1288,6 +1674,8 @@ nav.scrolled {
     z-index: 2000;
     justify-content: center;
     align-items: center;
+    padding: 1.5rem;
+    overflow: auto;
 }
 
 .modal.active {
