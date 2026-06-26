@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What I Learned Doing SEO on My Own Portfolio Site | Geofrey Gapasin</title>
+  <meta name="description" content="A transparent case study on applying SEO to a GitHub Pages portfolio — structured data, canonical tags, sitemaps, Open Graph, and what was broken before each fix.">
+  <meta name="keywords" content="portfolio SEO, GitHub Pages SEO, SEO for designers, SEO case study, structured data portfolio, meta tags portfolio">
+  <link rel="canonical" href="https://john-pio.github.io/Geofrey-Resume/seo-portfolio-lessons.html">
+  <meta name="author" content="Geofrey Gapasin">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What I Learned Doing SEO on My Own Portfolio Site | Geofrey Gapasin">
+  <meta property="og:description" content="A transparent case study on applying SEO to a GitHub Pages portfolio — structured data, canonical tags, sitemaps, and Open Graph.">
+  <meta property="og:url" content="https://john-pio.github.io/Geofrey-Resume/seo-portfolio-lessons.html">
+  <meta property="og:image" content="https://john-pio.github.io/Geofrey-Resume/img/geofrey-gapasin.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What I Learned Doing SEO on My Own Portfolio Site | Geofrey Gapasin">
+  <meta name="twitter:description" content="A transparent case study on applying SEO to a GitHub Pages portfolio.">
+  <meta name="twitter:image" content="https://john-pio.github.io/Geofrey-Resume/img/geofrey-gapasin.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What I Learned Doing SEO on My Own Portfolio Site",
+    "description": "A transparent case study on applying SEO to a GitHub Pages portfolio — structured data, canonical tags, sitemaps, Open Graph, and what was broken before each fix.",
+    "author": {
+      "@type": "Person",
+      "name": "Geofrey Gapasin",
+      "url": "https://john-pio.github.io/Geofrey-Resume/"
+    },
+    "publisher": { "@type": "Person", "name": "Geofrey Gapasin" },
+    "datePublished": "2026-06-27",
+    "dateModified": "2026-06-27",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://john-pio.github.io/Geofrey-Resume/seo-portfolio-lessons.html"
+    },
+    "keywords": "portfolio SEO, GitHub Pages SEO, SEO for designers, structured data, meta tags",
+    "articleSection": "SEO & Content Strategy",
+    "inLanguage": "en-US"
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="ui.js" defer></script>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      background: #080808;
+      color: #f0ede8;
+      font-family: 'Space Mono', 'Courier New', monospace;
+      margin: 0;
+      line-height: 1.7;
+    }
+    .site-article-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8,8,8,0.96);
+      border-bottom: 2px solid #2a2a2a;
+      backdrop-filter: blur(8px);
+    }
+    .site-article-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-brand {
+      color: #f5c400;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+    .site-article-nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .site-article-nav a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .site-article-nav a:hover { color: #f5c400; }
+    .article-shell {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 5rem;
+    }
+    .portfolio-back-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 1rem;
+      background: #111;
+      border: 1px solid #2a2a2a;
+      margin-bottom: 2.5rem;
+      gap: 0.75rem;
+    }
+    .portfolio-back-nav a {
+      color: #f0ede8;
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .portfolio-back-nav a:hover { color: #f5c400; }
+    .portfolio-tag-pill {
+      background: rgba(245,196,0,0.16);
+      color: #f5c400;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid rgba(245,196,0,0.3);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .article-meta {
+      font-size: 0.75rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      line-height: 1.15;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: #f0ede8;
+      margin: 0 0 1rem;
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: #cfc9bc;
+      line-height: 1.75;
+      border-left: 3px solid #f5c400;
+      padding-left: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f5c400;
+      margin: 2.5rem 0 0.75rem;
+    }
+    p { color: #cfc9bc; margin: 0 0 1.2rem; font-size: 0.92rem; }
+    a { color: #4ecdc4; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .fix-block {
+      background: #111;
+      border: 1px solid #2a2a2a;
+      border-left: 3px solid #4ecdc4;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .fix-block strong { color: #f0ede8; display: block; margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .fix-block p { margin: 0; font-size: 0.85rem; }
+    .fix-block code {
+      background: #1e1e1e;
+      color: #f5c400;
+      padding: 0.15rem 0.4rem;
+      font-family: monospace;
+      font-size: 0.8rem;
+    }
+    code {
+      background: #1e1e1e;
+      color: #f5c400;
+      padding: 0.15rem 0.4rem;
+      font-family: monospace;
+      font-size: 0.82rem;
+    }
+    .callout {
+      background: rgba(245,196,0,0.08);
+      border: 1px dashed rgba(245,196,0,0.4);
+      padding: 1rem 1.2rem;
+      margin: 2rem 0;
+      font-size: 0.88rem;
+      color: #e5d49d;
+    }
+    .article-footer-links {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #2a2a2a;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .article-footer-links a {
+      color: #f5c400;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    @media (max-width: 600px) {
+      .portfolio-back-nav { flex-direction: column; align-items: flex-start; }
+      .site-article-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-article-header">
+    <div class="site-article-inner">
+      <a class="site-brand" href="index.html">Geofrey Gapasin</a>
+      <nav class="site-article-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-shell">
+    <header class="portfolio-back-nav">
+      <a href="work.html">&larr; Back to Work</a>
+      <span class="portfolio-tag-pill">SEO Case Study</span>
+    </header>
+
+    <article>
+      <div class="article-meta">Geofrey Gapasin &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; 6 min read</div>
+      <h1>What I Learned Doing SEO on My Own Portfolio Site</h1>
+      <p class="lede">
+        I did a full SEO pass on this GitHub Pages portfolio. Here's exactly what was missing,
+        why it mattered, and how I fixed it — written for designers and developers who want to
+        make their own portfolio more crawlable without drowning in jargon.
+      </p>
+
+      <h2>Why a Portfolio Needs SEO at All</h2>
+      <p>
+        The common assumption is that a portfolio site doesn't need SEO because people find it
+        through your social links or a direct referral. That's partially true — but it misses the
+        point of what SEO actually signals. A well-structured portfolio tells Google (and any
+        recruiter who pastes your URL into a sharing debugger) that you care about the details.
+        For someone applying to an SEO content creator role, having a broken Open Graph setup
+        is a contradiction.
+      </p>
+      <p>
+        This wasn't a vanity project. It was a proof of concept: can I set up the technical SEO
+        foundations on a static GitHub Pages site correctly, and can I produce content that
+        demonstrates I understand why each piece matters?
+      </p>
+
+      <h2>What Was Already There</h2>
+      <p>
+        Before the SEO pass, this site already had the basics: descriptive <code>&lt;title&gt;</code>
+        tags on every page, <code>&lt;meta name="description"&gt;</code> on all pages, Open Graph
+        tags (<code>og:title</code>, <code>og:description</code>, <code>og:image</code>), canonical
+        links, and JSON-LD structured data covering Person, WebSite, ProfilePage, Article, and more.
+        The profile image path was also fixed early — a broken image in structured data is worse
+        than no image.
+      </p>
+      <p>That gave a reasonable foundation. What it didn't have was everything else.</p>
+
+      <h2>Fix 1: robots.txt</h2>
+      <div class="fix-block">
+        <strong>What was missing and why it matters</strong>
+        <p>Without a <code>robots.txt</code>, crawlers have no guidance. Some bots may deprioritize
+        sites that lack it. The fix was two lines: allow all crawlers, point to the sitemap.
+        GitHub Pages serves it from the repo root automatically.</p>
+      </div>
+
+      <h2>Fix 2: sitemap.xml</h2>
+      <div class="fix-block">
+        <strong>What was missing and why it matters</strong>
+        <p>Without a sitemap, Google has to discover pages by following links. That works eventually,
+        but it's slower and less reliable for small sites with few inbound links. The sitemap lists
+        every URL with a priority and change frequency — including the <code>project.html?id=</code>
+        query-string pages, which Google can crawl but benefits from being told about explicitly.</p>
+      </div>
+
+      <h2>Fix 3: Custom 404 Page</h2>
+      <div class="fix-block">
+        <strong>What was missing and why it matters</strong>
+        <p>GitHub Pages serves a generic error page on broken URLs. A branded 404 keeps users from
+        bouncing immediately by giving them navigation options. It also signals that the site is
+        maintained — a small but real quality signal.</p>
+      </div>
+
+      <h2>Fix 4: meta author and Twitter Card Tags</h2>
+      <div class="fix-block">
+        <strong>What was missing and why it matters</strong>
+        <p>Open Graph was already in place, but Twitter/X uses its own card system. Without
+        <code>twitter:card</code>, <code>twitter:title</code>, and <code>twitter:image</code>,
+        X falls back to OG tags — which mostly works, but leaves appearance inconsistent.
+        The <code>meta name="author"</code> tag is a minor but complete-checklist item.</p>
+      </div>
+
+      <h2>Fix 5: Internal Linking</h2>
+      <p>
+        The site's pages were mostly connected only through the nav. Internal links pass authority
+        between pages and help crawlers understand which pages are most important. Three concrete
+        additions: the home page now links to the process guide, the process guide footer links
+        to both the work page and the about page, and the about page work highlights link to
+        individual project pages.
+      </p>
+      <p>
+        None of these feel forced because they're genuinely useful for a real reader. The process
+        guide footer saying "See the finished ad creatives" is a natural next step.
+      </p>
+
+      <h2>Fix 6: BreadcrumbList Schema on project.html</h2>
+      <div class="fix-block">
+        <strong>What was missing and why it matters</strong>
+        <p>Project pages are dynamic — they load content via JavaScript based on a query string
+        parameter (<code>?id=project-one</code>). Breadcrumb schema was added dynamically in
+        the same script block that already updates the page title. Google can show these breadcrumbs
+        in search results, making the result look more structured and the URL path clearer.</p>
+      </div>
+
+      <h2>Fix 7: Content (Phase 3)</h2>
+      <p>
+        Technical SEO is table stakes. The real differentiator is content that earns indexing because
+        it answers questions people actually search for. This article is part of that — along with
+        the <a href="ai-tools-static-ad-production.html">AI tools workflow breakdown</a> and a
+        practical ad creative checklist. Each article follows proper heading hierarchy, includes
+        Article schema markup, has an internal link back to the work page, and targets keywords
+        the process-guide.html already has some authority for.
+      </p>
+
+      <div class="callout">
+        The most important thing I learned: the technical fixes take an afternoon. The content
+        takes longer, but it's what actually gets indexed and shared. If you're a designer trying
+        to demonstrate SEO knowledge, writing clearly about what you did and why is more useful
+        than a perfect Lighthouse score.
+      </div>
+
+      <h2>Final Thoughts</h2>
+      <p>
+        Every fix in this article was reversible, additive, and verifiable — no dark patterns,
+        no keyword stuffing, no tricks. Just completing what was missing and documenting it clearly.
+        That's what SEO content creation actually is: systematic, transparent, and useful.
+      </p>
+      <p>
+        The next step is submitting the sitemap to Google Search Console and requesting manual
+        indexing for each new page. After that, it's a waiting game — and a content game.
+      </p>
+
+      <div class="article-footer-links">
+        <a href="process-guide.html">See the Static Ad Process Guide &rarr;</a>
+        <a href="work.html">View the portfolio &rarr;</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

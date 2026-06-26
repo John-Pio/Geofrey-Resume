@@ -4,7 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details - Geofrey Gapasin</title>
+    <title>Project Details — Geofrey Gapasin Portfolio</title>
+    <meta name="description" content="Detailed case study from the portfolio of Geofrey Gapasin — covering web development, game design, and graphic design projects.">
+    <meta name="keywords" content="Geofrey Gapasin project, portfolio case study, web development, game design, graphic design">
+    <link rel="canonical" href="https://john-pio.github.io/Geofrey-Resume/project.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Project Details — Geofrey Gapasin Portfolio">
+    <meta property="og:description" content="Detailed case study from the portfolio of Geofrey Gapasin.">
+    <meta property="og:url" content="https://john-pio.github.io/Geofrey-Resume/project.html">
+    <meta property="og:image" content="https://john-pio.github.io/Geofrey-Resume/img/geofrey-gapasin.jpg">
+    <meta name="author" content="Geofrey Gapasin">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Project Details — Geofrey Gapasin Portfolio">
+    <meta name="twitter:description" content="Detailed case study from the portfolio of Geofrey Gapasin — covering web development, game design, and graphic design projects.">
+    <meta name="twitter:image" content="https://john-pio.github.io/Geofrey-Resume/img/geofrey-gapasin.jpg">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -119,6 +132,42 @@
     <script src="modules/projectPage.js"></script>
     <script src="ui.js"></script>
     <script src="script.js"></script>
+    <script>
+      // Dynamically update <title> and meta description once projectData is available
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        if (id && typeof projectData !== 'undefined' && projectData[id]) {
+          const p = projectData[id];
+          document.title = p.title + ' — Geofrey Gapasin Portfolio';
+          const desc = document.querySelector('meta[name="description"]');
+          if (desc) desc.setAttribute('content', p.subtitle || p.title);
+          const ogTitle = document.querySelector('meta[property="og:title"]');
+          if (ogTitle) ogTitle.setAttribute('content', p.title + ' — Geofrey Gapasin');
+          const ogDesc = document.querySelector('meta[property="og:description"]');
+          if (ogDesc) ogDesc.setAttribute('content', p.subtitle || p.title);
+          if (p.image) {
+            const ogImg = document.querySelector('meta[property="og:image"]');
+            if (ogImg) ogImg.setAttribute('content', 'https://john-pio.github.io/Geofrey-Resume/' + p.image);
+          }
+
+          // BreadcrumbList schema
+          const breadcrumb = document.createElement('script');
+          breadcrumb.type = 'application/ld+json';
+          breadcrumb.id = 'breadcrumb-jsonld';
+          breadcrumb.text = JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://john-pio.github.io/Geofrey-Resume/" },
+              { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://john-pio.github.io/Geofrey-Resume/work.html" },
+              { "@type": "ListItem", "position": 3, "name": p.title, "item": "https://john-pio.github.io/Geofrey-Resume/project.html?id=" + id }
+            ]
+          });
+          document.head.appendChild(breadcrumb);
+        }
+      })();
+    </script>
 </body>
 
 </html>

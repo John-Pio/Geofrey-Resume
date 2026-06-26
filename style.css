@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* ============================================================
    BRUTALIST PORTFOLIO — Design System
@@ -37,7 +37,7 @@ body {
 }
 
 /* --- Navigation --- */
-nav {
+#navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -47,7 +47,7 @@ nav {
     border-bottom: 2px solid var(--border);
 }
 
-nav.scrolled {
+#navbar.scrolled {
     border-bottom-color: var(--accent);
     box-shadow: none;
 }

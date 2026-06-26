@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Used AI Tools to Speed Up Static Ad Production | Geofrey Gapasin</title>
+  <meta name="description" content="A first-person breakdown of how Claude, ChatGPT, and Gemini actually fit into a static ad creative workflow — what each tool does well, what it doesn't, and how to use them without losing creative control.">
+  <meta name="keywords" content="AI tools for ad creatives, ChatGPT for graphic design, AI graphic design workflow, static ad production, Claude for designers, Gemini design workflow">
+  <link rel="canonical" href="https://john-pio.github.io/Geofrey-Resume/ai-tools-static-ad-production.html">
+  <meta name="author" content="Geofrey Gapasin">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How I Used AI Tools to Speed Up Static Ad Production | Geofrey Gapasin">
+  <meta property="og:description" content="A first-person breakdown of how Claude, ChatGPT, and Gemini fit into a static ad creative workflow — what each tool does well and what it doesn't.">
+  <meta property="og:url" content="https://john-pio.github.io/Geofrey-Resume/ai-tools-static-ad-production.html">
+  <meta property="og:image" content="https://john-pio.github.io/Geofrey-Resume/img/geofrey-gapasin.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How I Used AI Tools to Speed Up Static Ad Production | Geofrey Gapasin">
+  <meta name="twitter:description" content="A first-person breakdown of how Claude, ChatGPT, and Gemini fit into a static ad creative workflow.">
+  <meta name="twitter:image" content="https://john-pio.github.io/Geofrey-Resume/img/geofrey-gapasin.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How I Used AI Tools to Speed Up Static Ad Production",
+    "description": "A first-person breakdown of how Claude, ChatGPT, and Gemini actually fit into a static ad creative workflow — what each tool does well, what it doesn't, and how to use them without losing creative control.",
+    "author": {
+      "@type": "Person",
+      "name": "Geofrey Gapasin",
+      "url": "https://john-pio.github.io/Geofrey-Resume/"
+    },
+    "publisher": { "@type": "Person", "name": "Geofrey Gapasin" },
+    "datePublished": "2026-06-27",
+    "dateModified": "2026-06-27",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://john-pio.github.io/Geofrey-Resume/ai-tools-static-ad-production.html"
+    },
+    "keywords": "AI tools for ad creatives, ChatGPT for graphic design, AI graphic design workflow, static ad production",
+    "articleSection": "Design & AI Workflow",
+    "inLanguage": "en-US"
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="ui.js" defer></script>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      background: #080808;
+      color: #f0ede8;
+      font-family: 'Space Mono', 'Courier New', monospace;
+      margin: 0;
+      line-height: 1.7;
+    }
+    .site-article-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8,8,8,0.96);
+      border-bottom: 2px solid #2a2a2a;
+      backdrop-filter: blur(8px);
+    }
+    .site-article-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-brand {
+      color: #f5c400;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+    .site-article-nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .site-article-nav a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .site-article-nav a:hover { color: #f5c400; }
+    .article-shell {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 5rem;
+    }
+    .portfolio-back-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 1rem;
+      background: #111;
+      border: 1px solid #2a2a2a;
+      margin-bottom: 2.5rem;
+      gap: 0.75rem;
+    }
+    .portfolio-back-nav a {
+      color: #f0ede8;
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .portfolio-back-nav a:hover { color: #f5c400; }
+    .portfolio-tag-pill {
+      background: rgba(245,196,0,0.16);
+      color: #f5c400;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid rgba(245,196,0,0.3);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .article-meta {
+      font-size: 0.75rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      line-height: 1.15;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: #f0ede8;
+      margin: 0 0 1rem;
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: #cfc9bc;
+      line-height: 1.75;
+      border-left: 3px solid #f5c400;
+      padding-left: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f5c400;
+      margin: 2.5rem 0 0.75rem;
+    }
+    p { color: #cfc9bc; margin: 0 0 1.2rem; font-size: 0.92rem; }
+    a { color: #4ecdc4; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .tool-block {
+      background: #111;
+      border: 1px solid #2a2a2a;
+      border-left: 3px solid #f5c400;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .tool-block strong { color: #f0ede8; display: block; margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .tool-block p { margin: 0; font-size: 0.85rem; }
+    .callout {
+      background: rgba(245,196,0,0.08);
+      border: 1px dashed rgba(245,196,0,0.4);
+      padding: 1rem 1.2rem;
+      margin: 2rem 0;
+      font-size: 0.88rem;
+      color: #e5d49d;
+    }
+    .article-footer-links {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #2a2a2a;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .article-footer-links a {
+      color: #f5c400;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    @media (max-width: 600px) {
+      .portfolio-back-nav { flex-direction: column; align-items: flex-start; }
+      .site-article-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-article-header">
+    <div class="site-article-inner">
+      <a class="site-brand" href="index.html">Geofrey Gapasin</a>
+      <nav class="site-article-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-shell">
+    <header class="portfolio-back-nav">
+      <a href="work.html">&larr; Back to Work</a>
+      <span class="portfolio-tag-pill">AI &amp; Design Workflow</span>
+    </header>
+
+    <article>
+      <div class="article-meta">Geofrey Gapasin &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; 5 min read</div>
+      <h1>How I Used AI Tools to Speed Up Static Ad Production</h1>
+      <p class="lede">
+        Every tool you'll read about here — Claude, ChatGPT, Gemini — was used inside a real
+        production workflow, not a demo. Here's what each one actually did, what it was good at,
+        and where it got in the way.
+      </p>
+
+      <h2>The Honest Starting Point</h2>
+      <p>
+        When I started building the <a href="process-guide.html">10-step static ad creative workflow</a>,
+        the goal wasn't to see how much AI I could cram in. It was to figure out which parts of the
+        production process were slow because of guesswork, and whether any tool could reduce that
+        guesswork without creating new problems.
+      </p>
+      <p>
+        The short answer: yes, but only at specific steps. AI doesn't replace creative judgment.
+        It replaces the part of the process where you're staring at a blank canvas trying to generate
+        three different angle options in your head at the same time.
+      </p>
+
+      <h2>Step 05: Where AI Actually Fits</h2>
+      <p>
+        The workflow positions AI at Step 05 — after brief intake, moodboarding, strategy, and
+        competitive research are done. By that point, you're not asking AI to invent the creative
+        direction. You're asking it to rapidly pressure-test angles you've already started forming.
+      </p>
+      <p>
+        That distinction matters. AI used before strategy produces generic output because it has
+        no constraints. AI used after strategy produces useful scaffolding because it has context.
+      </p>
+
+      <h2>Claude: Brief Analysis and HTML Layout Templates</h2>
+      <div class="tool-block">
+        <strong>Best for: Reasoning through the brief, generating HTML layout scaffolds, structured artifacts</strong>
+        <p>Claude was the most useful tool for working with long briefs and producing HTML layout templates. Feed it the full brief, your moodboard notes, and a few reference observations, and it returns structured creative angles with hooks, visual direction, and layout rationale — not just bullet points.</p>
+      </div>
+      <p>
+        The specific workflow I ran: paste the brief and my research notes, ask for three creative
+        territories (not concepts, territories — broader than a single idea). Then ask it to scaffold
+        an HTML layout for the strongest one, with hook placement, CTA position, safe zones for text,
+        and an approximate visual hierarchy.
+      </p>
+      <p>
+        From there, I used html2canvas to export the layout as an image and brought it into
+        Photoshop as a production reference. Not as a finished ad. As a blueprint.
+      </p>
+
+      <h2>ChatGPT: Reasoning Plus Usable Image Generation</h2>
+      <div class="tool-block">
+        <strong>Best for: Visual concept generation, headline iteration, interactive refinement</strong>
+        <p>ChatGPT's image generation was the most useful for getting rough visual references early. The constraint is that you never use these images in the final ad — they're reference only, for composition and mood — but for establishing what "this should feel like" visually before touching Photoshop, it's faster than Pinterest for anything that requires a specific product configuration.</p>
+      </div>
+      <p>
+        The other thing ChatGPT handled well: headline iteration. Once you have a hook direction,
+        you can run 10 variations in under a minute, filter them against the brief, and walk into
+        compositing with a shortlist. That's a real time saving.
+      </p>
+
+      <h2>Gemini: Research and Multimodal Input</h2>
+      <div class="tool-block">
+        <strong>Best for: Research synthesis, multi-modal inputs, high-volume tasks with broad context</strong>
+        <p>Gemini's strongest value in this workflow was during Step 04 — competitive and brand research. Its integration with Google search made it faster to synthesize what competitors were running and what gaps existed. It also handled longer sessions without context drift better than the other tools in extended research tasks.</p>
+      </div>
+      <p>
+        The limitation: context can drift in very long sessions, and it's less precise when you need
+        highly structured output. For structured deliverables (briefs, rationale docs, layout templates),
+        Claude performed more consistently.
+      </p>
+
+      <h2>What None of These Tools Can Do</h2>
+      <p>
+        None of them can make the creative call. The choice between a price-anchoring hook and an
+        emotion-led hook, the decision to use dramatic negative space instead of a product-forward
+        composition — those decisions require understanding the brand, the audience, and the campaign
+        goal at the same time. AI gives you faster raw material to make those decisions from.
+        It doesn't make the decisions.
+      </p>
+      <div class="callout">
+        The rule I follow: if AI output would be submission-ready without human intervention, the task
+        was probably too simple to need AI in the first place. The real value is in the middle — complex
+        enough to benefit from scaffolding, nuanced enough to require a human finish.
+      </div>
+
+      <h2>Final Thoughts</h2>
+      <p>
+        Using AI tools in ad production isn't about being faster. It's about spending more of your
+        time on the decisions that actually matter — creative strategy, visual judgment, client
+        alignment — and less time on the parts that are just mechanical generation. Used right,
+        these tools compress the scaffolding phase without touching the craft.
+      </p>
+      <p>
+        If you want to see the full workflow these tools slot into, the
+        <a href="process-guide.html">Static Ad Creative Process Guide</a> walks through all 10 steps
+        in detail. And you can see the finished ads that came out of this process on the
+        <a href="work.html">Work page</a>.
+      </p>
+
+      <div class="article-footer-links">
+        <a href="process-guide.html">See the full process guide &rarr;</a>
+        <a href="work.html">View finished ad creatives &rarr;</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

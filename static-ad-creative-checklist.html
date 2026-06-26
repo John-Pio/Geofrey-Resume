@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Ad Creative Checklist: 12 Things to Review Before You Export | Geofrey Gapasin</title>
+  <meta name="description" content="A practical 12-point checklist for reviewing static ad creatives before export — covering hierarchy, copy, compliance, platform specs, file naming, and delivery.">
+  <meta name="keywords" content="static ad creative checklist, ad creative review checklist, Facebook ad design checklist, ad creative QA, static ad export checklist, ad design review">
+  <link rel="canonical" href="https://john-pio.github.io/Geofrey-Resume/static-ad-creative-checklist.html">
+  <meta name="author" content="Geofrey Gapasin">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Static Ad Creative Checklist: 12 Things to Review Before You Export | Geofrey Gapasin">
+  <meta property="og:description" content="A practical 12-point checklist for reviewing static ad creatives before export — hierarchy, copy, compliance, platform specs, and delivery.">
+  <meta property="og:url" content="https://john-pio.github.io/Geofrey-Resume/static-ad-creative-checklist.html">
+  <meta property="og:image" content="https://john-pio.github.io/Geofrey-Resume/img/geofrey-gapasin.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Static Ad Creative Checklist: 12 Things to Review Before You Export">
+  <meta name="twitter:description" content="A practical 12-point checklist for reviewing static ad creatives before export.">
+  <meta name="twitter:image" content="https://john-pio.github.io/Geofrey-Resume/img/geofrey-gapasin.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Static Ad Creative Checklist: 12 Things to Review Before You Export",
+    "description": "A practical 12-point checklist for reviewing static ad creatives before export — covering hierarchy, copy, compliance, platform specs, file naming, and delivery.",
+    "author": {
+      "@type": "Person",
+      "name": "Geofrey Gapasin",
+      "url": "https://john-pio.github.io/Geofrey-Resume/"
+    },
+    "publisher": { "@type": "Person", "name": "Geofrey Gapasin" },
+    "datePublished": "2026-06-27",
+    "dateModified": "2026-06-27",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://john-pio.github.io/Geofrey-Resume/static-ad-creative-checklist.html"
+    },
+    "keywords": "static ad creative checklist, ad creative review, Facebook ad design checklist, ad creative QA, export checklist",
+    "articleSection": "Design Workflow",
+    "inLanguage": "en-US"
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="ui.js" defer></script>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      background: #080808;
+      color: #f0ede8;
+      font-family: 'Space Mono', 'Courier New', monospace;
+      margin: 0;
+      line-height: 1.7;
+    }
+    .site-article-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8,8,8,0.96);
+      border-bottom: 2px solid #2a2a2a;
+      backdrop-filter: blur(8px);
+    }
+    .site-article-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-brand {
+      color: #f5c400;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+    .site-article-nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .site-article-nav a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .site-article-nav a:hover { color: #f5c400; }
+    .article-shell {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 5rem;
+    }
+    .portfolio-back-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 1rem;
+      background: #111;
+      border: 1px solid #2a2a2a;
+      margin-bottom: 2.5rem;
+      gap: 0.75rem;
+    }
+    .portfolio-back-nav a {
+      color: #f0ede8;
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .portfolio-back-nav a:hover { color: #f5c400; }
+    .portfolio-tag-pill {
+      background: rgba(245,196,0,0.16);
+      color: #f5c400;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid rgba(245,196,0,0.3);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .article-meta {
+      font-size: 0.75rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      line-height: 1.15;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: #f0ede8;
+      margin: 0 0 1rem;
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: #cfc9bc;
+      line-height: 1.75;
+      border-left: 3px solid #f5c400;
+      padding-left: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f5c400;
+      margin: 2.5rem 0 0.75rem;
+    }
+    p { color: #cfc9bc; margin: 0 0 1.2rem; font-size: 0.92rem; }
+    a { color: #4ecdc4; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .checklist {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .check-item {
+      background: #111;
+      border: 1px solid #2a2a2a;
+      padding: 1rem 1.2rem;
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: 0.75rem;
+      align-items: start;
+    }
+    .check-num {
+      color: #f5c400;
+      font-weight: 700;
+      font-size: 0.95rem;
+      font-family: monospace;
+      padding-top: 0.1rem;
+    }
+    .check-content strong {
+      color: #f0ede8;
+      display: block;
+      margin-bottom: 0.35rem;
+      font-size: 0.92rem;
+    }
+    .check-content p {
+      margin: 0;
+      font-size: 0.82rem;
+      color: #aba59b;
+    }
+    code {
+      background: #1e1e1e;
+      color: #f5c400;
+      padding: 0.15rem 0.4rem;
+      font-family: monospace;
+      font-size: 0.82rem;
+    }
+    .callout {
+      background: rgba(245,196,0,0.08);
+      border: 1px dashed rgba(245,196,0,0.4);
+      padding: 1rem 1.2rem;
+      margin: 2rem 0;
+      font-size: 0.88rem;
+      color: #e5d49d;
+    }
+    .article-footer-links {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #2a2a2a;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .article-footer-links a {
+      color: #f5c400;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    @media (max-width: 600px) {
+      .portfolio-back-nav { flex-direction: column; align-items: flex-start; }
+      .site-article-inner { flex-direction: column; align-items: flex-start; }
+      .check-item { grid-template-columns: 1.5rem 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-article-header">
+    <div class="site-article-inner">
+      <a class="site-brand" href="index.html">Geofrey Gapasin</a>
+      <nav class="site-article-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-shell">
+    <header class="portfolio-back-nav">
+      <a href="work.html">&larr; Back to Work</a>
+      <span class="portfolio-tag-pill">Design Checklist</span>
+    </header>
+
+    <article>
+      <div class="article-meta">Geofrey Gapasin &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; 4 min read</div>
+      <h1>Static Ad Creative Checklist: 12 Things to Review Before You Export</h1>
+      <p class="lede">
+        Catch problems before they become revision rounds. This checklist covers every layer of
+        a static ad — from hierarchy and copy to compliance and file naming — in the order you
+        should actually check them.
+      </p>
+
+      <p>
+        This checklist grew out of the <a href="process-guide.html">10-step static ad creative workflow</a>
+        documented elsewhere in this portfolio. It's designed for the moment between "compositing
+        is done" and "I'm about to export." Run through it top to bottom. The items near the end
+        are the ones most people skip, and they're the ones that create problems after delivery.
+      </p>
+
+      <h2>The 12-Point Pre-Export Checklist</h2>
+
+      <div class="checklist">
+
+        <div class="check-item">
+          <div class="check-num">01</div>
+          <div class="check-content">
+            <strong>Canvas dimensions match the platform spec</strong>
+            <p>Meta feed static: 1080×1350px (4:5) or 1080×1080px (1:1). Stories: 1080×1920px. Google Display: varies. Export the right size, not whatever you happened to build the canvas at.</p>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="check-num">02</div>
+          <div class="check-content">
+            <strong>Text is readable at thumbnail size</strong>
+            <p>Zoom out to 25% and read the headline. If you can't read it easily, the headline is too small or too low-contrast. This is the most common oversight that only shows up at feed size.</p>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="check-num">03</div>
+          <div class="check-content">
+            <strong>Safe zones are respected</strong>
+            <p>Keep key content (headline, product, CTA) away from the outer 5–8% of the frame. Platforms crop or overlay UI elements near the edges on mobile. What looks fine in Photoshop may be partially hidden in-feed.</p>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="check-num">04</div>
+          <div class="check-content">
+            <strong>Visual hierarchy is clear in three seconds</strong>
+            <p>A viewer's eye should travel: hook → product/visual → CTA. If the CTA is the most visually prominent element, the order is wrong. If the product is buried, the creative is broken.</p>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="check-num">05</div>
+          <div class="check-content">
+            <strong>Copy matches the approved brief</strong>
+            <p>Check every word in the ad against the approved brief or client sign-off. Specifically: headline, subhead, CTA label, any supporting claims or offers. One wrong word can mean a revision round or a compliance issue.</p>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="check-num">06</div>
+          <div class="check-content">
+            <strong>No unsupported claims or misleading language</strong>
+            <p>"Guaranteed results," "Number 1 in the world," "Cures X" — all of these can get an ad rejected or an account flagged. If the claim requires a source, either add the source or rewrite the claim. When in doubt, flag it with the account manager before export.</p>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="check-num">07</div>
+          <div class="check-content">
+            <strong>Logo is visible and clearspace rules are followed</strong>
+            <p>Check the brand guidelines: minimum logo size, clearspace around the mark, and approved placements. A logo that's too small or overlapping another element is a brand violation, not just a design note.</p>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="check-num">08</div>
+          <div class="check-content">
+            <strong>Colors match the brand palette</strong>
+            <p>Use the exact hex values from the brand guide, not eyedropper samples from a reference image. Color can drift through screenshots, compressed references, and monitor differences. Check against the spec.</p>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="check-num">09</div>
+          <div class="check-content">
+            <strong>Product cutout edges are clean</strong>
+            <p>Zoom to 100% and check the edges of any cut-out product image. Fringe, halos, or rough masking edges read as amateur work at feed size. This is especially critical for products on white or light backgrounds.</p>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="check-num">10</div>
+          <div class="check-content">
+            <strong>All fonts are embedded or outlined</strong>
+            <p>If the PSD uses system fonts or fonts that aren't embedded, anyone else who opens the file will see substitutions. Outline or rasterize text layers before sending the master file. Export as PNG/JPG for delivery, not PSD.</p>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="check-num">11</div>
+          <div class="check-content">
+            <strong>File is exported at the correct format and compression</strong>
+            <p>Meta: PNG for graphics-heavy, JPG for photography. File size under 30MB (usually well under). Google: check the specific Display spec — some placements have strict file size caps. Export settings matter; don't just hit "Save for Web" with defaults.</p>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="check-num">12</div>
+          <div class="check-content">
+            <strong>File is named correctly and folders are organized</strong>
+            <p>Use the naming convention: <code>[Client]_[Campaign]_[AdName]_[Hook]_[Variable]_[Variant#].png</code>. A clearly named file in a clearly structured folder is what separates a professional delivery from a confusing ZIP of random files. Don't underestimate how much this matters to the person receiving the work.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="callout">
+        Print this list or keep it open in a second window during every final review pass.
+        The items you're most likely to skip are 05 (copy check against the brief) and 12
+        (file naming). Both of those will create friction later if you miss them.
+      </div>
+
+      <h2>How This Fits Into the Larger Workflow</h2>
+      <p>
+        This checklist covers the back end of Step 08 (Compositing) through the end of Step 09
+        (A/B Variation Production) in the full <a href="process-guide.html">10-step static ad
+        creative workflow</a>. Run it once per variant, not once per batch.
+      </p>
+      <p>
+        After the checklist is complete, the creative is ready for the Step 10 delivery report —
+        which documents the rationale behind each ad and makes you a strategic partner rather than
+        just someone who executed a brief.
+      </p>
+
+      <div class="article-footer-links">
+        <a href="process-guide.html">See the full 10-step process guide &rarr;</a>
+        <a href="work.html">View the ad creative portfolio &rarr;</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

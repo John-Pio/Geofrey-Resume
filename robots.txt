@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://john-pio.github.io/Geofrey-Resume/sitemap.xml
