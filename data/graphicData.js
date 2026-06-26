@@ -1,7 +1,7 @@
 const adCreativeData = [
     {
         title: 'Before & After Teeth Ad',
-        src: 'img/GraphicPortfolio/Ad Creative/Teeth.png',
+        src: 'img/GraphicPortfolio/Ad Creative/teeth-whitening-ad.png',
         pageName: 'GreenSmile',
         avatar: 'G',
         accent: '#0a9cff',
@@ -15,7 +15,7 @@ const adCreativeData = [
     },
     {
         title: 'Foam & Jelly Gummy',
-        src: 'img/GraphicPortfolio/Ad Creative/Foam Gummy.png',
+        src: 'img/GraphicPortfolio/Ad Creative/foam-gummy-ad.png',
         pageName: 'Clean Candy Delivery',
         avatar: 'C',
         accent: '#ffffff',
@@ -29,7 +29,7 @@ const adCreativeData = [
     },
     {
         title: 'Sour Gummy',
-        src: 'img/GraphicPortfolio/Ad Creative/Sour Gummy.png',
+        src: 'img/GraphicPortfolio/Ad Creative/sour-gummy-ad.png',
         pageName: 'Clean Candy Delivery',
         avatar: 'C',
         accent: '#ffffff',
@@ -43,7 +43,7 @@ const adCreativeData = [
     },
     {
         title: 'Sweet Gummy',
-        src: 'img/GraphicPortfolio/Ad Creative/Sweet Gummy.png',
+        src: 'img/GraphicPortfolio/Ad Creative/sweet-gummy-ad.png',
         pageName: 'Clean Candy Delivery',
         avatar: 'C',
         accent: '#ffffff',
@@ -57,7 +57,7 @@ const adCreativeData = [
     },
     {
         title: 'Cup Holder Product Ad',
-        src: 'img/GraphicPortfolio/Ad Creative/ad.png',
+        src: 'img/GraphicPortfolio/Ad Creative/cup-holder-product-ad.png',
         pageName: 'Car Gadgets & Accessories',
         avatar: 'C',
         accent: '#4d7cff',
@@ -71,7 +71,7 @@ const adCreativeData = [
     },
     {
         title: 'Floral Dress Promo',
-        src: 'img/GraphicPortfolio/Ad Creative/Dress 1.png',
+        src: 'img/GraphicPortfolio/Ad Creative/floral-midi-dress-ad.png',
         pageName: 'Damesjurken & Mode',
         avatar: 'D',
         accent: '#d85f8f',
@@ -85,7 +85,7 @@ const adCreativeData = [
     },
     {
         title: 'CloudStep Sneaker Ad',
-        src: 'img/GraphicPortfolio/Ad Creative/Sneaker 1 new.png',
+        src: 'img/GraphicPortfolio/Ad Creative/cloudstep-sneaker-ad.png',
         pageName: 'CloudStep Sneakers',
         avatar: 'S',
         accent: '#5855d6',
@@ -99,7 +99,7 @@ const adCreativeData = [
     },
     {
         title: 'Olive Flat Product Ad',
-        src: 'img/GraphicPortfolio/Ad Creative/Shoe 2 new.png',
+        src: 'img/GraphicPortfolio/Ad Creative/comfort-ballerina-flat-olive-ad.png',
         pageName: 'Ballerina Comfort Shoes',
         avatar: 'B',
         accent: '#6f8b3d',
@@ -113,7 +113,7 @@ const adCreativeData = [
     },
     {
         title: 'Burgundy Flat Product Ad',
-        src: 'img/GraphicPortfolio/Ad Creative/Shoe 4.png',
+        src: 'img/GraphicPortfolio/Ad Creative/suede-ballerina-flat-burgundy-ad.png',
         pageName: 'Stijlvolle Dameslaarzen',
         avatar: 'S',
         accent: '#8a2f4e',
@@ -127,7 +127,7 @@ const adCreativeData = [
     },
     {
         title: 'Whitening Article Hook',
-        src: 'img/GraphicPortfolio/Ad Creative/Faux Article.png',
+        src: 'img/GraphicPortfolio/Ad Creative/teeth-whitening-article-faux-ad.png',
         pageName: 'Oral Care Journal',
         avatar: 'O',
         accent: '#2f86ff',
@@ -141,7 +141,7 @@ const adCreativeData = [
     },
     {
         title: 'Mobile Teeth Proof Ad',
-        src: 'img/GraphicPortfolio/Ad Creative/Phone.png',
+        src: 'img/GraphicPortfolio/Ad Creative/teeth-whitening-powder-mobile-ad.png',
         pageName: 'GreenSmile',
         avatar: 'G',
         accent: '#1f5e79',
@@ -156,17 +156,17 @@ const adCreativeData = [
 ];
 
 const apparelData = [
-    { title: 'Awesome Copy', src: 'img/GraphicPortfolio/Transparent/Awesome copy.png' },
-    { title: 'Awesome Preview', src: 'img/GraphicPortfolio/Transparent/Awesome_Preview.png' },
-    { title: 'Brief Affirmation', src: 'img/GraphicPortfolio/Transparent/BriefAffirmation Transparent shadow.png' },
-    { title: 'Fantastic', src: 'img/GraphicPortfolio/Transparent/Fantastic.png' },
-    { title: 'Fishing Time', src: 'img/GraphicPortfolio/Transparent/FishingTime.png' },
-    { title: 'Happy Sun', src: 'img/GraphicPortfolio/Transparent/HappySun Transparent.png' },
-    { title: 'Nice', src: 'img/GraphicPortfolio/Transparent/Nice.png' },
-    { title: 'Pastel Sunset', src: 'img/GraphicPortfolio/Transparent/Pastel Sunset.png' },
-    { title: 'Shrimp Fried Rice', src: 'img/GraphicPortfolio/Transparent/Shrimp Fried Rice.png' },
-    { title: 'Vintage Sarcasm', src: 'img/GraphicPortfolio/Transparent/VintageSarcasm transparent2.png' },
-    { title: 'aRIEEES', src: 'img/GraphicPortfolio/Transparent/aRIEEES.png' },
-    { title: 'Believer', src: 'img/GraphicPortfolio/Transparent/believer 2.png' },
-    { title: 'Tralalelo Tralala', src: 'img/GraphicPortfolio/Transparent/tralalelo tralala.png' }
+    { title: 'Awesome Copy', src: 'img/GraphicPortfolio/Transparent/awesome-copy-apparel.png' },
+    { title: 'Awesome Preview', src: 'img/GraphicPortfolio/Transparent/awesome-preview-apparel.png' },
+    { title: 'Brief Affirmation', src: 'img/GraphicPortfolio/Transparent/brief-affirmation-apparel.png' },
+    { title: 'Fantastic', src: 'img/GraphicPortfolio/Transparent/fantastic-apparel.png' },
+    { title: 'Fishing Time', src: 'img/GraphicPortfolio/Transparent/fishing-time-apparel.png' },
+    { title: 'Happy Sun', src: 'img/GraphicPortfolio/Transparent/happy-sun-apparel.png' },
+    { title: 'Nice', src: 'img/GraphicPortfolio/Transparent/nice-apparel.png' },
+    { title: 'Pastel Sunset', src: 'img/GraphicPortfolio/Transparent/pastel-sunset-apparel.png' },
+    { title: 'Shrimp Fried Rice', src: 'img/GraphicPortfolio/Transparent/shrimp-fried-rice-apparel.png' },
+    { title: 'Vintage Sarcasm', src: 'img/GraphicPortfolio/Transparent/vintage-sarcasm-apparel.png' },
+    { title: 'aRIEEES', src: 'img/GraphicPortfolio/Transparent/aries-apparel.png' },
+    { title: 'Believer', src: 'img/GraphicPortfolio/Transparent/believer-apparel.png' },
+    { title: 'Tralalelo Tralala', src: 'img/GraphicPortfolio/Transparent/tralalelo-tralala-apparel.png' }
 ];

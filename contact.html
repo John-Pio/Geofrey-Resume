@@ -32,10 +32,10 @@
 
             <div class="availability-status">
                 <span class="status-indicator"></span>
-                <strong>Available for new projects</strong> - Currently accepting freelance work for web development, design, and creative projects
+                <strong>Available for short gigs</strong> - Currently only accepting short freelance projects, as I think I am hired part-time
             </div>
 
-            <div class="contact-grid">
+            <div class="contact-container" style="max-width: 650px; margin: 0 auto; margin-bottom: 4rem;">
                 <!-- Contact Form -->
                 <!-- <div class="contact-card">
                     <h2 class="contact-title">Send a Message</h2>
@@ -168,9 +168,10 @@
             this.style.userSelect = 'text';
         });
 
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
             // Check captcha
             const captchaAnswer = document.getElementById('captcha').value;
             if (captchaAnswer != '10') {
@@ -192,6 +193,7 @@
                 submitBtn.disabled = false;
             }, 2000);
         });
+        }
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

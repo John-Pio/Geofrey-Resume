@@ -2,7 +2,7 @@ const projectData = {
     'project-one': {
         title: 'CafeVox: Discovery Platform & Profile System',
         subtitle: 'A major feature enhancement for an AI chat application, introducing a complete discovery system, public/private user profiles, and a significant UI/UX overhaul.',
-        image: 'img/CafeVox.png',
+        image: 'img/cafe-vox-platform.png',
         category: 'Full-Stack Development',
         date: 'September 2025',
         duration: 'Several Weeks',
@@ -12,19 +12,19 @@ const projectData = {
 
     The primary challenge was integrating these complex features seamlessly into the existing single-page application, enhancing user engagement without disrupting core functionality. This overhaul successfully laid the foundation for future analytics, social interactions, and advanced content management, significantly increasing the platform's value.`,
         gallery: [{
-            url: 'img/Explore-Page.png',
+            url: 'img/cafe-vox-explore-page.png',
             caption: 'Redesigned Explore & Discovery page with dynamic content sections'
         },
             {
-                url: 'img/Public-Profile.png',
+                url: 'img/cafe-vox-public-profile.png',
                 caption: 'Public user profile page with character showcase and sharing'
             },
             {
-                url: 'img/Character-Details.png',
+                url: 'img/cafe-vox-character-details.png',
                 caption: 'Dedicated character detail view with clean layout and stats'
             },
             {
-                url: 'img/Mobile-View.png',
+                url: 'img/cafe-vox-mobile-view.png',
                 caption: 'Mobile-first responsive design for all new features',
                 type: 'browser'
             }
@@ -68,7 +68,7 @@ const projectData = {
     'project-two': {
         title: 'PatingGames Web Portal',
         subtitle: 'A dynamic, database-driven web application for browsing and playing browser-based games, built with PHP and MySQL.',
-        image: 'img/patinggames-full.png',
+        image: 'img/pating-games-homepage.png',
         category: 'Web Development',
         date: 'September 2025',
         duration: 'University Coursework',
@@ -79,17 +79,17 @@ const projectData = {
 The platform features a dynamic homepage that loads games from the database, categorizes them for easy browsing, and includes a real-time search function. The system also includes a simple content management feature, allowing new games to be added through a web form, which handles data and image thumbnail uploads directly to the server and database. The front-end is enhanced with JavaScript for features like a persistent dark/light mode toggle and a responsive mobile navigation menu.`,
         gallery: [{
 
-            url: 'img/patinggames-full.png',
+            url: 'img/pating-games-homepage.png',
             caption: 'Homepage Screenshot - Scroll to explore!',
             type: 'browser'
         },
             {
-                url: 'img/Game-Page.png',
+                url: 'img/pating-games-play-page.png',
                 caption: 'Individual game page with an embedded iframe player.',
                 type: 'browser'
             },
             {
-                url: 'img/Add-Game.png',
+                url: 'img/pating-games-add-game-modal.png',
                 caption: 'Admin modal for adding new games to the database.',
                 type: 'browser'
             }
@@ -133,7 +133,7 @@ The platform features a dynamic homepage that loads games from the database, cat
     'project-three': {
         title: 'ProGamer RPG',
         subtitle: 'Survival Java Programming Puzzle Game for Grade 11 ICT Students',
-        image: 'img/ProGamer-Main-Menu.png',
+        image: 'img/progamer-rpg-main-menu.png',
         category: 'Game Development',
         date: 'September 2024',
         duration: '5 months',
@@ -147,15 +147,15 @@ The project's mission is to bridge the gap between traditional teaching methods 
 more accessible, intuitive, and fun. With instant feedback, skill progression, and offline play, ProGamer RPG offers a unique way to reinforce 
 Java fundamentals while keeping students motivated.`,
         gallery: [{
-            url: 'img/ProGamer-Combat.png',
+            url: 'img/progamer-rpg-combat.png',
             caption: 'Melee and ranged combat in action'
         },
             {
-                url: 'img/ProGamer-Code-Challenge.png',
+                url: 'img/progamer-rpg-code-challenge.png',
                 caption: 'In-game Java programming puzzle'
             },
             {
-                url: 'img/ProGamer-Skill-Upgrades.png',
+                url: 'img/progamer-rpg-skill-upgrades.png',
                 caption: 'Skill tree for combat and coding abilities'
             }
         ],
@@ -204,7 +204,7 @@ Java fundamentals while keeping students motivated.`,
     "project-four": {
         title: "Pest Exterminator: Tabletop Game & Manual Design",
         subtitle: "An original tabletop strategy game complete with custom rules, character design, and a comprehensive instruction manual.",
-        image: "img/Tabletop-Thumb.png",
+        image: "img/pest-exterminator-tabletop-thumbnail.png",
         category: "Editorial Design & Game Design",
         date: "May 2025",
         duration: "2 Months",
@@ -215,22 +215,22 @@ Java fundamentals while keeping students motivated.`,
 The primary focus of this portfolio piece is the 8-page instructional manual, designed to be clear, engaging, and visually consistent with the game's theme. The challenge was to present complex rules, character stats, and setup instructions in an easily digestible format for new players. The project combines strategic game design with clean editorial layout, custom illustrations, and cohesive branding.`,
 
         gallery: [{
-            url: "img/Tabletop-Game-Components.png",
+            url: "img/pest-exterminator-game-components.png",
             caption: "Overview of all game components and figures",
             type: 'browser'
         },
             {
-                url: "img/Tabletop-Game-Cards.png",
+                url: "img/pest-exterminator-game-cards.png",
                 caption: "A selection of player action cards",
                 type: 'browser'
             },
             {
-                url: "img/Tabletop-Game-Enemies.png",
+                url: "img/pest-exterminator-game-enemies.png",
                 caption: "Examples of pest enemy cards with unique stats",
                 type: 'browser'
             },
             {
-                url: "img/Tabletop-Game-Bosses.png",
+                url: "img/pest-exterminator-game-bosses.png",
                 caption: "The miniboss illustrations and stats page",
                 type: 'browser'
             }
@@ -271,7 +271,7 @@ The primary focus of this portfolio piece is the 8-page instructional manual, de
     "project-five": {
         title: "Lead Generation Landing Page",
         subtitle: "Full-stack lead-generation platform with integrated quiz system, bulk user registration, and admin dashboard.",
-        image: "img/lead-gen-thumbnail.png",
+        image: "img/lead-gen-landing-thumbnail.png",
         category: "Full-Stack Development",
         date: "October 2025",
         duration: "2 Weeks",
@@ -283,7 +283,7 @@ The project showcases the ability to architect and implement complex systems fro
 
 Key achievements include implementing real-time data validation, secure bulk operations, and detailed success/failure reporting systems that provide actionable feedback to administrators.`,
         gallery: [{
-            url: "img/lead-gen-landing.png",
+            url: "img/lead-gen-landing-page.png",
             caption: "Landing page with multi-step quiz interface",
             type: 'browser'
         },
@@ -298,7 +298,7 @@ Key achievements include implementing real-time data validation, secure bulk ope
                 type: 'browser'
             },
             {
-                url: "img/lead-gen-quiz.png",
+                url: "img/lead-gen-quiz-step.png",
                 caption: "Interactive multi-step quiz with progress tracking",
                 type: 'browser'
             }

@@ -1,5 +1,89 @@
 // ─── Project Detail Page ──────────────────────────────────────────────────────
 
+function updateProjectSEOMetadata(project, projectId) {
+    if (!project) return;
+    
+    // 1. Dynamic Page Title
+    document.title = `${project.title} - Geofrey Gapasin Portfolio`;
+
+    // 2. Dynamic Meta Description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+        metaDesc = document.createElement('meta');
+        metaDesc.setAttribute('name', 'description');
+        document.head.appendChild(metaDesc);
+    }
+    // Limit description to ~160 characters for clean SEO formatting
+    const descriptionText = project.subtitle || project.description || '';
+    metaDesc.setAttribute('content', descriptionText.substring(0, 160).trim() + (descriptionText.length > 160 ? '...' : ''));
+
+    // 3. Dynamic Open Graph tags
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (!ogTitle) {
+        ogTitle = document.createElement('meta');
+        ogTitle.setAttribute('property', 'og:title');
+        document.head.appendChild(ogTitle);
+    }
+    ogTitle.setAttribute('content', project.title);
+
+    let ogDesc = document.querySelector('meta[property="og:description"]');
+    if (!ogDesc) {
+        ogDesc = document.createElement('meta');
+        ogDesc.setAttribute('property', 'og:description');
+        document.head.appendChild(ogDesc);
+    }
+    ogDesc.setAttribute('content', descriptionText.substring(0, 160).trim());
+
+    let ogImage = document.querySelector('meta[property="og:image"]');
+    if (!ogImage) {
+        ogImage = document.createElement('meta');
+        ogImage.setAttribute('property', 'og:image');
+        document.head.appendChild(ogImage);
+    }
+    ogImage.setAttribute('content', window.location.origin + '/' + project.image);
+
+    // 4. JSON-LD Schema Markup
+    const existingSchema = document.getElementById('project-jsonld');
+    if (existingSchema) {
+        existingSchema.remove();
+    }
+
+    let schemaType = 'CreativeWork';
+    if (project.category && (project.category.toLowerCase().includes('game') || project.category.toLowerCase().includes('unity'))) {
+        schemaType = 'VideoGame';
+    } else if (project.category && (project.category.toLowerCase().includes('development') || project.category.toLowerCase().includes('full-stack'))) {
+        schemaType = 'SoftwareApplication';
+    }
+
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": schemaType,
+        "name": project.title,
+        "description": project.subtitle || project.description,
+        "image": window.location.origin + '/' + project.image,
+        "author": {
+            "@type": "Person",
+            "name": "Geofrey Gapasin",
+            "url": window.location.origin
+        },
+        "genre": project.category,
+        "dateCreated": project.date
+    };
+
+    if (schemaType === 'SoftwareApplication' || schemaType === 'VideoGame') {
+        schemaData.applicationCategory = schemaType === 'VideoGame' ? 'GameApplication' : 'DeveloperApplication';
+        if (project.technologies) {
+            schemaData.programmingLanguage = project.technologies;
+        }
+    }
+
+    const script = document.createElement('script');
+    script.id = 'project-jsonld';
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schemaData, null, 2);
+    document.head.appendChild(script);
+}
+
 function loadEnhancedProject() {
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('id');
@@ -8,7 +92,7 @@ function loadEnhancedProject() {
         showProjectNotFound();
         return;
     }
-    document.title = project.title + ' - Geofrey Gapasin';
+    updateProjectSEOMetadata(project, projectId);
     const heroBg = document.getElementById('hero-bg');
     const projectTitle = document.getElementById('project-title');
     const projectSubtitle = document.getElementById('project-subtitle');
@@ -38,7 +122,7 @@ function loadEnhancedProject() {
             if (item.type === 'browser') {
                 return `
                     <div class="gallery-item" onclick="openBrowserModal('${item.url}')">
-                        <img src="${item.url}" alt="${item.caption}">
+                        <img src="${item.url}" alt="${item.caption}" loading="lazy">
                         <div class="gallery-overlay">
                             <span>${item.caption}</span>
                         </div>
@@ -47,7 +131,7 @@ function loadEnhancedProject() {
             } else {
                 return `
                     <div class="gallery-item" onclick="openModal('${item.url}')">
-                        <img src="${item.url}" alt="${item.caption}">
+                        <img src="${item.url}" alt="${item.caption}" loading="lazy">
                         <div class="gallery-overlay">
                             <span>${item.caption}</span>
                         </div>
@@ -142,7 +226,7 @@ function loadLegacyProject() {
     const projectId = urlParams.get('id');
     const project = projectData[projectId];
     if (project) {
-        document.title = project.title + ' - Geofrey Gapasin';
+        updateProjectSEOMetadata(project, projectId);
         projectDetailContent.innerHTML = `
             <div class="page-header">
                 <h1>${ project.title }</h1>

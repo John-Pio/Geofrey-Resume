@@ -1,0 +1,1954 @@
+<!-- Suggested URL slug: /static-ad-creative-process-guide -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Metadata -->
+  <title>Static Ad Creative Process Guide: 10-Step Workflow | Geofrey Gapasin</title>
+  <meta name="description" content="A 10-step static ad creative workflow covering brief intake, AI prototyping, Photoshop compositing, A/B variants, and delivery reporting.">
+  <meta name="keywords" content="static ad process, creative workflow, AI design prototyping, conversion design pipeline, Photoshop compositing framework, ad creative audit">
+  <link rel="canonical" href="https://john-pio.github.io/Geofrey-Resume/process-guide.html">
+  <link rel="stylesheet" href="style.css">
+  <script src="ui.js" defer></script>
+  <script src="script.js" defer></script>
+  <!-- JSON-LD Structured Data: Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Static Ad Creative Process Guide: A 10-Step Workflow",
+    "description": "A repeatable 10-step production workflow for moving from rough client brief to finished static ad variants, covering strategy, AI-assisted prototyping, compositing, A/B testing, and delivery reporting.",
+    "author": {
+      "@type": "Person",
+      "name": "Geofrey Gapasin",
+      "url": "https://john-pio.github.io/Geofrey-Resume/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Geofrey Gapasin"
+    },
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-06-26",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://john-pio.github.io/Geofrey-Resume/process-guide.html"
+    },
+    "keywords": "static ad creative process, ad workflow, creative brief intake, AI visual prototyping, Photoshop compositing, A/B variation production",
+    "articleSection": "Creative Workflow",
+    "inLanguage": "en-US"
+  }
+  </script>
+  <style>
+    :root {
+      --black: #0f0f0f;
+      --ink: #101014;
+      --text: #fafafa;
+      --muted: #62626d;
+      --soft: #f5f5f3;
+      --line: #dedbd2;
+      --gold: #c4a54f;
+      --gold-bright: #ffba1d;
+      --blue: #003da5;
+      --red: #ff3131;
+      --green: #67bc45;
+      --pink: #fe00a1;
+      --paper: #ffffff;
+      --shade: #1a1a1a;
+      --font-body: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      --font-display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    @page {
+      size: 11in 8.5in;
+      margin: 0;
+    }
+
+    body {
+      margin: 0;
+      background: #d9d9dc;
+      color: var(--ink);
+      font-family: var(--font-body);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* Portfolio Back-To-Work Navigation Bar Styling */
+    .portfolio-back-nav {
+      max-width: 11in;
+      margin: 2rem auto 0 auto;
+      padding: 12px 24px;
+      background: #111115;
+      border-radius: 8px 8px 0 0;
+      border-bottom: 1px solid #2e2e38;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 95%;
+    }
+    .portfolio-back-nav a {
+      color: #fafafa;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .portfolio-back-nav a:hover {
+      color: var(--gold);
+    }
+    .portfolio-tag-pill {
+      background: rgba(196, 165, 79, 0.15);
+      color: var(--gold-bright);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .page {
+      max-width: 11in;
+      width: 95%;
+      min-height: 8.5in;
+      height: auto;
+      margin: 0 auto 2rem auto;
+      overflow: hidden;
+      position: relative;
+      background: var(--paper);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+      border-radius: 8px;
+    }
+
+    /* Adjust page margins slightly when preceded by portfolio bar */
+    .page:first-of-type {
+      margin-top: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    @media print {
+      body {
+        background: var(--paper);
+      }
+      .portfolio-back-nav {
+        display: none;
+      }
+      .page {
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+
+    .dark {
+      color: var(--text);
+      background:
+        radial-gradient(circle at 17% 15%, rgba(196, 165, 79, 0.23), transparent 26%),
+        radial-gradient(circle at 84% 85%, rgba(0, 61, 165, 0.23), transparent 30%),
+        linear-gradient(135deg, #0f0f0f, #191919 52%, #090909);
+    }
+
+    .dark::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.11;
+      background-image:
+        repeating-radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.38) 0 1px, transparent 1px 5px);
+      mix-blend-mode: overlay;
+      pointer-events: none;
+    }
+
+    .header {
+      height: 0.76in;
+      padding: 0.18in 0.45in;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--black);
+      border-bottom: 4px solid var(--gold);
+      color: var(--text);
+    }
+
+    .header h2 {
+      font-size: 0.18in;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .mark {
+      display: flex;
+      align-items: center;
+      gap: 0.11in;
+      font-size: 0.105in;
+      color: rgba(250, 250, 250, 0.72);
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .dot {
+      width: 0.1in;
+      height: 0.1in;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 6px rgba(196, 165, 79, 0.16);
+    }
+
+    .content {
+      min-height: calc(8.5in - 0.76in);
+      height: auto;
+      padding: 0.34in 0.45in 0.42in;
+      position: relative;
+    }
+
+    .kicker {
+      color: var(--gold);
+      font-size: 0.125in;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin-bottom: 0.08in;
+    }
+
+    .title {
+      font-family: var(--font-display);
+      font-size: 0.49in;
+      line-height: 0.95;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin-bottom: 0.12in;
+    }
+
+    .lede {
+      color: #3f3f46;
+      font-size: 0.158in;
+      line-height: 1.45;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.112in;
+      line-height: 1.45;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.26in;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.18in;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .panel.dark-panel {
+      background: #151515;
+      border-color: #2e2e2e;
+      color: var(--text);
+    }
+
+    .panel-pad {
+      padding: 0.18in;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.06in;
+      min-height: 0.24in;
+      padding: 0.045in 0.08in;
+      border-radius: 5px;
+      background: rgba(196, 165, 79, 0.16);
+      color: #6f5822;
+      font-size: 0.092in;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .caption {
+      padding: 0.09in 0.12in;
+      font-size: 0.102in;
+      line-height: 1.35;
+      color: #50505a;
+      background: #f7f6f2;
+      border-top: 1px solid var(--line);
+    }
+
+    .number {
+      position: absolute;
+      right: 0.38in;
+      bottom: 0.22in;
+      font-family: var(--font-display);
+      font-size: 0.5in;
+      color: rgba(16, 16, 20, 0.13);
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .dark .number {
+      color: rgba(255, 255, 255, 0.16);
+    }
+
+    .cover-inner {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      padding: 0.64in 0.62in;
+      display: grid;
+      align-content: space-between;
+    }
+
+    .cover-top {
+      display: flex;
+      justify-content: space-between;
+      color: rgba(250, 250, 250, 0.7);
+      font-size: 0.115in;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .cover-title {
+      max-width: 8.6in;
+    }
+
+    .cover-title h1 {
+      font-family: var(--font-display);
+      font-size: 0.95in;
+      line-height: 0.86;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin: 0.12in 0 0.18in;
+    }
+
+    .cover-title h3 {
+      color: var(--gold-bright);
+      font-size: 0.19in;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .cover-title p {
+      color: rgba(250, 250, 250, 0.78);
+      font-size: 0.18in;
+      line-height: 1.45;
+      max-width: 5.9in;
+    }
+
+    .cover-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      color: rgba(250, 250, 250, 0.72);
+      font-size: 0.12in;
+      line-height: 1.6;
+    }
+
+    .intro-list {
+      display: grid;
+      gap: 0.075in;
+      margin-top: 0.08in;
+    }
+
+    .intro-row,
+    .check-row {
+      display: grid;
+      grid-template-columns: 0.36in 1fr;
+      gap: 0.12in;
+      align-items: start;
+      padding-bottom: 0.065in;
+      border-bottom: 1px solid #e9e6dd;
+      font-size: 0.125in;
+      line-height: 1.35;
+    }
+
+    .intro-row strong,
+    .check-row strong {
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    /* internal navigation link styles for seo spider bots */
+    .intro-row a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .intro-row a:hover {
+      color: var(--gold-bright);
+    }
+
+    .text-stack {
+      display: grid;
+      gap: 0.13in;
+    }
+
+    .bullets {
+      display: grid;
+      gap: 0.07in;
+      margin-top: 0.11in;
+      color: #3f3f46;
+      font-size: 0.12in;
+      line-height: 1.36;
+    }
+
+    .bullets div::before {
+      content: "";
+      display: inline-block;
+      width: 0.055in;
+      height: 0.055in;
+      margin-right: 0.06in;
+      background: var(--gold);
+      vertical-align: 0.02in;
+    }
+
+    .mock-window {
+      background: #fff;
+      border: 1px solid #d8d8dd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(16, 16, 20, 0.08);
+    }
+
+    .bar {
+      height: 0.28in;
+      background: #f0f0f3;
+      display: flex;
+      align-items: center;
+      gap: 0.06in;
+      padding: 0 0.12in;
+      border-bottom: 1px solid #dad9dd;
+    }
+
+    .bar span {
+      width: 0.07in;
+      height: 0.07in;
+      border-radius: 50%;
+      background: #c7c7ce;
+    }
+
+    .doc {
+      padding: 0.18in;
+    }
+
+    .doc h3 {
+      font-size: 0.18in;
+      margin-bottom: 0.12in;
+    }
+
+    .doc-line {
+      height: 0.08in;
+      margin: 0.07in 0;
+      border-radius: 4px;
+      background: #eceaf1;
+    }
+
+    .doc-line.gold {
+      background: rgba(196, 165, 79, 0.36);
+    }
+
+    .doc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.11in;
+      margin-top: 0.14in;
+    }
+
+    .doc-box {
+      min-height: 0.64in;
+      padding: 0.1in;
+      border: 1px solid #e2e0d9;
+      border-radius: 7px;
+      background: #fbfaf7;
+      font-size: 0.095in;
+      line-height: 1.32;
+      color: #4d4d55;
+    }
+
+    .shot {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .shot.contain {
+      object-fit: contain;
+      background: #f2f2f2;
+    }
+
+    .img-box {
+      position: relative;
+      background: #f3f3f4;
+      overflow: hidden;
+    }
+
+    .img-box.tall {
+      height: 5.35in;
+    }
+
+    .img-box.medium {
+      height: 3.2in;
+    }
+
+    .img-box.short {
+      height: 2.2in;
+    }
+
+    .tag {
+      position: absolute;
+      left: 0.12in;
+      top: 0.12in;
+      z-index: 2;
+      max-width: 2.15in;
+      padding: 0.08in 0.1in;
+      border-radius: 6px;
+      background: rgba(15, 15, 15, 0.84);
+      color: #fff;
+      font-size: 0.095in;
+      line-height: 1.22;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .tag.gold {
+      background: rgba(196, 165, 79, 0.92);
+      color: #111;
+      font-weight: 800;
+    }
+
+    .tag.right {
+      left: auto;
+      right: 0.12in;
+    }
+
+    .tag.bottom {
+      top: auto;
+      bottom: 0.12in;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.105in;
+      line-height: 1.28;
+    }
+
+    th {
+      background: var(--black);
+      color: #fff;
+      text-align: left;
+      font-weight: 850;
+    }
+
+    th,
+    td {
+      padding: 0.08in 0.09in;
+      border: 1px solid #e2dfd7;
+      vertical-align: top;
+    }
+
+    td strong {
+      color: var(--ink);
+    }
+
+    .tool-table td:first-child {
+      font-weight: 850;
+      color: var(--blue);
+      width: 1.2in;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.12in;
+    }
+
+    .flow-step {
+      min-height: 1.05in;
+      padding: 0.13in;
+      background: #f7f6f1;
+      border: 1px solid #e2dfd7;
+      border-radius: 8px;
+      font-size: 0.103in;
+      line-height: 1.34;
+    }
+
+    .flow-step strong {
+      display: block;
+      color: var(--gold);
+      font-size: 0.2in;
+      margin-bottom: 0.05in;
+      font-family: var(--font-display);
+    }
+
+    .chat {
+      height: 2.62in;
+      background: #f6f6f8;
+      border-radius: 8px;
+      border: 1px solid #dcdce1;
+      overflow: hidden;
+    }
+
+    .chat .doc {
+      padding: 0.12in;
+    }
+
+    .bubble {
+      padding: 0.08in 0.1in;
+      margin-bottom: 0.08in;
+      border-radius: 8px;
+      font-size: 0.092in;
+      line-height: 1.32;
+    }
+
+    .user {
+      background: #e8f0ff;
+      margin-left: 0.4in;
+    }
+
+    .ai {
+      background: #fff;
+      border: 1px solid #e1e1e4;
+      margin-right: 0.25in;
+    }
+
+    .folder {
+      display: grid;
+      grid-template-columns: 1.2in 1fr;
+      height: 2.4in;
+      font-size: 0.105in;
+    }
+
+    .folder-side {
+      background: #f1f1f4;
+      border-right: 1px solid #dcdce2;
+      padding: 0.14in;
+      display: grid;
+      align-content: start;
+      gap: 0.08in;
+      color: #4f4f5a;
+    }
+
+    .folder-main {
+      padding: 0.14in;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.12in;
+      align-content: start;
+    }
+
+    .folder-icon {
+      height: 0.62in;
+      border-radius: 7px;
+      background:
+        linear-gradient(#ffd45e 0 28%, #efb529 28% 100%);
+      border: 1px solid #d3a43d;
+      margin-bottom: 0.06in;
+    }
+
+    .layers {
+      background: #2c2c30;
+      color: #e8e8ec;
+      padding: 0.12in;
+      height: 3.06in;
+      display: grid;
+      gap: 0.07in;
+      font-size: 0.095in;
+    }
+
+    .layer {
+      display: grid;
+      grid-template-columns: 0.18in 1fr 0.42in;
+      align-items: center;
+      gap: 0.08in;
+      min-height: 0.22in;
+      padding: 0.045in 0.07in;
+      background: #3a3a40;
+      border-radius: 4px;
+    }
+
+    .eye {
+      width: 0.12in;
+      height: 0.08in;
+      border-radius: 50%;
+      background: #bdbdc5;
+    }
+
+    .thumb {
+      height: 0.15in;
+      border-radius: 3px;
+      background: var(--gold);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 0.12in;
+      height: 5.7in;
+    }
+
+    .gallery .panel {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      min-height: 0;
+    }
+
+    .gallery .img-box {
+      min-height: 0;
+      height: auto;
+    }
+
+    .ad-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.18in;
+      height: 5.5in;
+    }
+
+    .ad-grid .panel {
+      display: grid;
+      grid-template-rows: 1fr auto;
+    }
+
+    .pending {
+      border: 2px dashed #cbb86d;
+      background: #fffaf0;
+      color: #6a5b2b;
+      border-radius: 8px;
+      padding: 0.18in;
+      font-size: 0.12in;
+      line-height: 1.4;
+    }
+
+    .matrix {
+      font-size: 0.096in;
+    }
+
+    .matrix th,
+    .matrix td {
+      padding: 0.055in 0.06in;
+    }
+
+    .glossary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.15in;
+      margin-top: 0.16in;
+      font-size: 0.104in;
+      color: #4c4c55;
+      line-height: 1.35;
+    }
+
+    .back-center {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      padding: 0.74in;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .back-center h2 {
+      font-family: var(--font-display);
+      font-size: 0.86in;
+      line-height: 0.9;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin-bottom: 0.24in;
+    }
+
+    .back-center p {
+      max-width: 7.2in;
+      color: rgba(250, 250, 250, 0.78);
+      font-size: 0.18in;
+      line-height: 1.5;
+    }
+  </style>
+  <style>
+    body {
+      margin: 0;
+      background: #080808;
+      color: #f0ede8;
+      font-family: 'Space Mono', 'Courier New', monospace;
+      line-height: 1.6;
+      -webkit-print-color-adjust: unset;
+      print-color-adjust: unset;
+    }
+
+    .site-article-header {
+      position: relative;
+      z-index: 1000;
+      background: rgba(8, 8, 8, 0.96);
+      border-bottom: 2px solid #2a2a2a;
+      backdrop-filter: blur(8px);
+    }
+
+    .site-article-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .site-brand {
+      color: #f5c400;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .site-article-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .site-article-nav a {
+      color: #888888;
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .site-article-nav a:hover {
+      color: #f5c400;
+    }
+
+    .article-shell {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 6rem 1.25rem 4rem;
+    }
+
+    .portfolio-back-nav {
+      max-width: 100%;
+      margin: 0 0 1.5rem;
+      padding: 1rem 1.25rem;
+      background: #111111;
+      border: 1px solid #2a2a2a;
+      border-radius: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      width: auto;
+    }
+
+    .portfolio-back-nav a {
+      color: #f0ede8;
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .portfolio-back-nav a:hover {
+      color: #f5c400;
+    }
+
+    .portfolio-tag-pill {
+      background: rgba(245, 196, 0, 0.16);
+      color: #f5c400;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid rgba(245, 196, 0, 0.3);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .guide-article {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .page {
+      max-width: 100%;
+      width: 100%;
+      min-height: auto;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+      background: #151515;
+      box-shadow: none;
+      border-radius: 0;
+      border: 1px solid #2a2a2a;
+    }
+
+    section.page.dark:first-of-type {
+      min-height: 60vh;
+    }
+
+    .page.dark {
+      color: #f0ede8;
+      background: linear-gradient(135deg, #111111, #1a1a1a 55%, #0f0f0f);
+    }
+
+    .page.dark::after {
+      display: none;
+    }
+
+    .header {
+      height: auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      background: #111111;
+      border-bottom: 2px solid #f5c400;
+      color: #f0ede8;
+    }
+
+    .header h2 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .mark {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.72rem;
+      color: #bdb6aa;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .dot {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: #f5c400;
+      box-shadow: none;
+    }
+
+    .content {
+      min-height: auto;
+      height: auto;
+      padding: 1.5rem 1.25rem 1.75rem;
+      position: relative;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .kicker {
+      color: #f5c400;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.25rem;
+    }
+
+    .title {
+      font-family: 'Space Mono', 'Courier New', monospace;
+      font-size: clamp(1.35rem, 3vw, 2.1rem);
+      line-height: 1.12;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: #f0ede8;
+    }
+
+    .lede {
+      color: #cfc9bc;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      max-width: 70ch;
+    }
+
+    .small {
+      color: #aba59b;
+      font-size: 0.8rem;
+      line-height: 1.65;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .panel {
+      border: 1px solid #2a2a2a;
+      background: #1b1b1b;
+      border-radius: 0;
+      overflow: hidden;
+    }
+
+    .panel.dark-panel {
+      background: #101010;
+      border-color: #2a2a2a;
+      color: #f0ede8;
+    }
+
+    .panel-pad {
+      padding: 1rem;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      min-height: auto;
+      padding: 0.35rem 0.7rem;
+      border-radius: 0;
+      background: #f5c400;
+      color: #080808;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .caption {
+      padding: 0.9rem 1rem;
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: #9b958b;
+      background: #121212;
+      border-top: 1px solid #2a2a2a;
+    }
+
+    .number {
+      display: none;
+    }
+
+    .cover-inner {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      padding: 2rem 1.5rem;
+      display: grid;
+      align-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .cover-top,
+    .cover-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      color: rgba(240, 237, 232, 0.72);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .cover-title h1 {
+      font-family: 'Space Mono', 'Courier New', monospace;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 0.95;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin: 0.4rem 0 0.7rem;
+      color: #f0ede8;
+    }
+
+    .cover-title h3 {
+      color: #f5c400;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin: 0;
+    }
+
+    .cover-title p {
+      color: rgba(240, 237, 232, 0.8);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 60ch;
+      margin: 0;
+    }
+
+    .intro-list {
+      display: grid;
+      gap: 0.7rem;
+      margin-top: 0.8rem;
+    }
+
+    .intro-row,
+    .check-row {
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: 0.65rem;
+      align-items: start;
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid #2a2a2a;
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .intro-row strong,
+    .check-row strong {
+      color: #f5c400;
+      font-weight: 700;
+    }
+
+    .intro-row a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .intro-row a:hover {
+      color: #f5c400;
+    }
+
+    .text-stack {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .bullets {
+      display: grid;
+      gap: 0.55rem;
+      margin-top: 0.6rem;
+      color: #cfc9bc;
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    .bullets div::before {
+      content: "";
+      display: inline-block;
+      width: 0.45rem;
+      height: 0.45rem;
+      margin-right: 0.5rem;
+      background: #f5c400;
+      vertical-align: middle;
+    }
+
+    .mock-window,
+    .chat,
+    .folder,
+    .img-box,
+    .gallery .panel,
+    .ad-grid .panel {
+      background: #171717;
+      border-color: #2a2a2a;
+      box-shadow: none;
+    }
+
+    .doc,
+    .doc-box,
+    .flow-step,
+    .layers {
+      background: #1b1b1b;
+      border-color: #2a2a2a;
+      color: inherit;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    th,
+    td {
+      padding: 0.7rem 0.75rem;
+      border: 1px solid #2a2a2a;
+      vertical-align: top;
+      background: #171717;
+    }
+
+    th {
+      background: #111111;
+      color: #f5c400;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+
+    td strong {
+      color: #f0ede8;
+    }
+
+    .tool-table td:first-child {
+      font-weight: 700;
+      color: #f5c400;
+      width: 1.2in;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .flow-step {
+      min-height: auto;
+      padding: 0.95rem;
+      background: #171717;
+      border: 1px solid #2a2a2a;
+      border-radius: 0;
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    .flow-step strong {
+      display: block;
+      color: #f5c400;
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+      font-family: 'Space Mono', 'Courier New', monospace;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .ad-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .pending {
+      border: 1px dashed #f5c400;
+      background: rgba(245, 196, 0, 0.08);
+      color: #e5d49d;
+      border-radius: 0;
+      padding: 0.9rem 1rem;
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    .glossary {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: #bdb6aa;
+      line-height: 1.6;
+    }
+
+    .back-center {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      padding: 2rem 1.5rem;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .back-center h2 {
+      font-family: 'Space Mono', 'Courier New', monospace;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      line-height: 1.05;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.8rem;
+      color: #f0ede8;
+    }
+
+    .back-center p {
+      max-width: 70ch;
+      color: rgba(240, 237, 232, 0.8);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2,
+      .grid-3,
+      .flow,
+      .gallery,
+      .ad-grid,
+      .glossary {
+        grid-template-columns: 1fr;
+      }
+
+      .site-article-inner,
+      .portfolio-back-nav,
+      .cover-top,
+      .cover-bottom,
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .site-article-header,
+      .portfolio-back-nav {
+        display: none;
+      }
+
+      .page {
+        border: none;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-article-header">
+    <div class="site-article-inner">
+      <a class="site-brand" href="index.html">Geofrey Gapasin</a>
+      <nav class="site-article-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-shell">
+  <!-- Top Portfolio Header for Seamless Website Embedding & Crawlability -->
+  <header class="portfolio-back-nav">
+    <a href="work.html">&larr; Back to Case Studies</a>
+    <span class="portfolio-tag-pill">Process Documentation Case Study</span>
+  </header>
+
+  <!-- Wrapping Content inside Article Tags for High SEO Weighting -->
+  <article>
+    <section class="page dark">
+      <div class="cover-inner">
+        <div class="cover-top">
+          <span>Creative Portfolio Case Study</span>
+          <span>Version 1.0 / 2026</span>
+        </div>
+        <div class="cover-title">
+          <h3>Production Field Guide</h3>
+          <h1>The Static Ad Creative Process</h1>
+          <p>A repeatable workflow for moving from rough client brief to finished static ad variants, with strategy, AI-assisted prototyping, compositing, and delivery reports.</p>
+        </div>
+        <div class="cover-bottom">
+          <span>Prepared for design team onboarding</span>
+          <strong>Geofrey Gapasin Portfolio</strong>
+        </div>
+      </div>
+      <div class="number">01</div>
+    </section>
+
+    <section class="page" id="overview">
+      <div class="header">
+        <h2>How to Use This Guide</h2>
+        <div class="mark"><span class="dot"></span><span>Process Overview</span></div>
+      </div>
+      <div class="content grid-2">
+        <div class="text-stack">
+          <div>
+            <div class="kicker">About This Guide</div>
+            <h2 class="title">A process is only useful if you actually use it.</h2>
+          </div>
+          <p class="lede">This guide is a repeatable production workflow, not a rulebook. It is built for junior designers, new hires, and freelancers who need to understand how a static ad moves from messy intake to clean delivery.</p>
+          <p class="lede">Some steps compress on tight deadlines. Some expand when the client is new, the offer is sensitive, or the ad must pass heavy platform review. The order still matters: each step feeds the next.</p>
+          <p class="lede">The goal is simple: reduce guesswork, make creative choices easier to defend, and build ads that look intentional instead of assembled at the last minute.</p>
+        </div>
+        <nav class="panel panel-pad" aria-label="Table of contents: 10-step static ad creative workflow">
+          <div class="label">10-Step Workflow</div>
+          <div class="intro-list">
+            <div class="intro-row"><strong>01</strong><span><a href="#step1">Creative Brief Intake</a></span></div>
+            <div class="intro-row"><strong>02</strong><span><a href="#step2">Visual Research &amp; Moodboarding</a></span></div>
+            <div class="intro-row"><strong>03</strong><span><a href="#step3">Creative Strategy &amp; Brief Expansion</a></span></div>
+            <div class="intro-row"><strong>04</strong><span><a href="#step4">Competitive &amp; Brand Research</a></span></div>
+            <div class="intro-row"><strong>05</strong><span><a href="#step5">Rapid Ideation with AI</a></span></div>
+            <div class="intro-row"><strong>06</strong><span><a href="#step6">Asset Sourcing &amp; Production Prep</a></span></div>
+            <div class="intro-row"><strong>07</strong><span><a href="#step7">Legal &amp; Compliance Review</a></span></div>
+            <div class="intro-row"><strong>08</strong><span><a href="#step8">Compositing</a></span></div>
+            <div class="intro-row"><strong>09</strong><span><a href="#step9">A/B Variation Production</a></span></div>
+            <div class="intro-row"><strong>10</strong><span><a href="#step10">Creative Delivery Report</a></span></div>
+          </div>
+        </nav>
+      </div>
+      <div class="number">02</div>
+    </section>
+
+    <section class="page" id="step1">
+      <div class="header">
+        <h2>Step 01</h2>
+        <div class="mark"><span class="dot"></span><span>Creative Brief Intake</span></div>
+      </div>
+      <div class="content grid-2">
+        <div class="text-stack">
+          <div>
+            <div class="kicker">Step 01</div>
+            <h2 class="title">Creative Brief Intake</h2>
+            <p class="lede"><strong>Also called:</strong> Client onboarding, brief review. <strong>Output:</strong> an approved creative brief.</p>
+          </div>
+          <p class="lede">The brief turns client context into a production target. Before opening Photoshop, capture the goal, audience, offer, deliverables, platform specs, deadline, brand constraints, and required claims.</p>
+          <div class="panel panel-pad">
+            <div class="label">Collect From Client</div>
+            <div class="bullets">
+              <div>Social profiles and active ad accounts</div>
+              <div>Website URL and current landing page</div>
+              <div>Brand guidelines, logos, fonts, and product imagery</div>
+              <div>Past ads, best-performing content, and anything legally required</div>
+            </div>
+          </div>
+          <p class="small">Common pitfall: accepting a thin brief. If the brief cannot explain the audience, the offer, and the ad format, the first design round becomes discovery by revision.</p>
+        </div>
+        <div class="mock-window">
+          <div class="bar"><span></span><span></span><span></span></div>
+          <div class="doc">
+            <h3>Creative Brief / Static Ad Campaign</h3>
+            <div class="doc-line gold" style="width: 86%;"></div>
+            <div class="doc-line" style="width: 74%;"></div>
+            <div class="doc-grid">
+              <div class="doc-box"><strong>Goal</strong><br>Drive qualified leads for a single offer using 3 static ad variants.</div>
+              <div class="doc-box"><strong>Audience</strong><br>Primary buyers, awareness stage, emotional triggers, objections.</div>
+              <div class="doc-box"><strong>Specs</strong><br>Meta feed static ads, 4:5 ratio, mobile-first, logo visible.</div>
+              <div class="doc-box"><strong>Deadline</strong><br>Concept approval by Friday. Final PNG exports after compliance pass.</div>
+            </div>
+            <div class="doc-line" style="width: 95%; margin-top: 0.17in;"></div>
+            <div class="doc-line" style="width: 89%;"></div>
+            <div class="doc-line" style="width: 64%;"></div>
+          </div>
+          <div class="caption">Anonymized creative brief screenshot mockup: goal, audience, specs, and deadline are the minimum viable intake fields.</div>
+        </div>
+      </div>
+      <div class="number">03</div>
+    </section>
+
+    <section class="page" id="step2">
+      <div class="header">
+        <h2>Step 02</h2>
+        <div class="mark"><span class="dot"></span><span>Visual Research & Moodboarding</span></div>
+      </div>
+      <div class="content">
+        <div class="grid-2" style="grid-template-columns: 1.05fr 0.95fr; height: 100%;">
+          <div class="text-stack">
+            <div>
+              <div class="kicker">Step 02</div>
+              <h2 class="title">Visual Research & Moodboarding</h2>
+              <p class="lede"><strong>Also called:</strong> Art direction research. When bundled with rationale: creative direction deck.</p>
+            </div>
+            <p class="lede">A moodboard creates shared visual language before production. It lets the designer compare references for lighting, composition, typography, color, and ad format without committing to a layout too early.</p>
+            <div class="panel panel-pad">
+              <div class="label">Tool of Choice</div>
+              <p class="small" style="margin-top: 0.08in;">FigJam is ideal because references, notes, quick sketches, and strategy comments can live on the same board.</p>
+            </div>
+            <p class="small">This step can be compressed or skipped on very small tasks under one hour, but it should stay active for new clients, new campaigns, or unfamiliar visual categories.</p>
+            <div class="panel">
+              <div class="img-box short"><img class="shot" src="Pinterest Reference Board.png" alt="Pinterest reference board screenshot"></div>
+              <div class="caption">Reference board: use outside inspiration to identify patterns, not to copy finished ads.</div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="img-box tall">
+              <img class="shot" src="FigJam Screenshot.png" alt="FigJam moodboard screenshot">
+              <div class="tag gold">Moodboard: photography, type, layouts, and color notes in one space.</div>
+            </div>
+            <div class="caption">FigJam moodboard screenshot from the working research process.</div>
+          </div>
+        </div>
+      </div>
+      <div class="number">04</div>
+    </section>
+
+    <section class="page" id="step3">
+      <div class="header">
+        <h2>Step 03</h2>
+        <div class="mark"><span class="dot"></span><span>Creative Strategy</span></div>
+      </div>
+      <div class="content grid-2">
+        <div class="text-stack">
+          <div>
+            <div class="kicker">Step 03</div>
+            <h2 class="title">Creative Strategy & Brief Expansion</h2>
+            <p class="lede"><strong>Also called:</strong> Concept development. <strong>Output:</strong> creative brief expansion or concept doc.</p>
+          </div>
+          <p class="lede">This is where the rough brief becomes usable direction. The goal is to catch misalignment before a single pixel is placed.</p>
+          <div class="bullets">
+            <div>Restate the objective in plain production language.</div>
+            <div>Define creative territories, hook options, and emotional angles.</div>
+            <div>Document typography, color, photo treatment, and layout direction.</div>
+            <div>Flag anything that requires client approval before production.</div>
+          </div>
+          <p class="small">This step is the expansion of the moodboard. Anything useful found during research should land here as a decision, rationale, or constraint.</p>
+        </div>
+        <div class="mock-window">
+          <div class="bar"><span></span><span></span><span></span></div>
+          <div class="doc">
+            <h3>The Melanie Dolls: Creative Strategy & Brief Expansion</h3>
+            <div class="doc-box"><strong>Objective</strong><br>Build static ads around identity, faith, representation, and confidence rather than generic toy features.</div>
+            <div class="doc-grid">
+              <div class="doc-box"><strong>Territory A</strong><br>The Mirror of Confidence<br><em>A gift that looks like her.</em></div>
+              <div class="doc-box"><strong>Territory B</strong><br>Defined by God<br><em>Faith-based identity reinforcement.</em></div>
+              <div class="doc-box"><strong>Territory C</strong><br>Celebrating the Crown<br><em>4C hair and natural beauty.</em></div>
+              <div class="doc-box"><strong>Production Notes</strong><br>Static ads only. Keep hooks short, mobile-readable, and parent-facing.</div>
+            </div>
+          </div>
+          <div class="caption">Brief expansion mockup based on the supplied Melanie strategy and unusual original brief. It turns raw notes into static-ad direction.</div>
+        </div>
+      </div>
+      <div class="number">05</div>
+    </section>
+
+    <section class="page" id="step4">
+      <div class="header">
+        <h2>Step 04</h2>
+        <div class="mark"><span class="dot"></span><span>Competitive & Brand Research</span></div>
+      </div>
+      <div class="content">
+        <div class="grid-2" style="grid-template-columns: 0.88fr 1.12fr; gap: 0.22in;">
+          <div class="text-stack">
+            <div>
+              <div class="kicker">Step 04</div>
+              <h2 class="title">Competitive & Brand Research</h2>
+              <p class="lede"><strong>Also called:</strong> Brand audit, social research. <strong>Output:</strong> brand identity profile.</p>
+            </div>
+            <p class="lede">Look for brand voice, visual patterns, category conventions, competitor hooks, and gaps the ad can exploit.</p>
+            <div class="grid-2" style="gap: 0.12in;">
+              <div class="panel panel-pad">
+                <div class="label">Client Side</div>
+                <div class="bullets">
+                  <div>Website</div>
+                  <div>Socials</div>
+                  <div>Past ads</div>
+                  <div>Guidelines</div>
+                  <div>Collateral</div>
+                </div>
+              </div>
+              <div class="panel panel-pad">
+                <div class="label">Competitor Side</div>
+                <div class="bullets">
+                  <div>Ad library</div>
+                  <div>Top posts</div>
+                  <div>Hook style</div>
+                  <div>Format mix</div>
+                  <div>Visual gaps</div>
+                </div>
+              </div>
+            </div>
+            <div class="mock-window">
+              <div class="bar"><span></span><span></span><span></span></div>
+              <div class="doc" style="padding: 0.14in;">
+                <h3>Brand Guideline Snapshot</h3>
+                <div class="doc-grid">
+                  <div class="doc-box"><strong>Primary</strong><br><span style="display:block;height:.22in;background:#003da5;margin-top:.04in;border-radius:4px;"></span>#003DA5</div>
+                  <div class="doc-box"><strong>Accent</strong><br><span style="display:block;height:.22in;background:#ff3131;margin-top:.04in;border-radius:4px;"></span>#FF3131</div>
+                  <div class="doc-box"><strong>Typeface</strong><br>Barlow Condensed for high-impact headlines.</div>
+                  <div class="doc-box"><strong>Logo</strong><br>Clearspace equals the height of the icon mark.</div>
+                </div>
+              </div>
+              <div class="caption">Generic guideline page: extract colors, type rules, clearspace, and usage restrictions.</div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="img-box tall">
+              <img class="shot" src="facebook ad library screenshot.png" alt="Facebook ad library screenshot">
+              <div class="tag">Read for hook type, visual style, format, claims, and offer framing.</div>
+            </div>
+            <div class="caption">Meta Ad Library screenshot: competitor research helps avoid designing in a vacuum.</div>
+          </div>
+        </div>
+      </div>
+      <div class="number">06</div>
+    </section>
+
+    <section class="page" id="step5">
+      <div class="header">
+        <h2>Step 05</h2>
+        <div class="mark"><span class="dot"></span><span>AI Tools Overview</span></div>
+      </div>
+      <div class="content">
+        <div class="kicker">Step 05</div>
+        <h2 class="title">Rapid Ideation with AI</h2>
+        <p class="lede" style="max-width: 8.8in; margin-bottom: 0.22in;">AI outputs are reference only, never submission-ready. The value is speed and exploration: angles, layout scaffolds, headline structure, and fast concept pressure testing.</p>
+        <table class="tool-table">
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Best For</th>
+              <th>Pros</th>
+              <th>Cons</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Claude</td>
+              <td>Brief analysis, reasoning, HTML templates</td>
+              <td>Strong reasoning, reads and creates long docs, good at structured artifacts</td>
+              <td>No native image generation, conversation limits at peak times</td>
+            </tr>
+            <tr>
+              <td>Gemini</td>
+              <td>Research and image-generation starting points</td>
+              <td>High limits, Google integration, audio and multimodal inputs</td>
+              <td>Context can drift in long sessions</td>
+            </tr>
+            <tr>
+              <td>ChatGPT</td>
+              <td>Reasoning and high-quality image generation</td>
+              <td>Strong reasoning, strong image generation, good interactive iteration</td>
+              <td>Upload and image-generation limits depend on plan</td>
+            </tr>
+            <tr>
+              <td>Muse Spark</td>
+              <td>Simple general use with image and reasoning</td>
+              <td>All-in-one, approachable, useful for quick drafts</td>
+              <td>No standout specialty compared with dedicated tools</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="small" style="margin-top: 0.18in;">Agentic workflows exist, but they are outside the scope of this guide. This section focuses on practical static-ad production support.</p>
+      </div>
+      <div class="number">07</div>
+    </section>
+
+    <section class="page">
+      <div class="header">
+        <h2>Step 05</h2>
+        <div class="mark"><span class="dot"></span><span>Visual Prototyping</span></div>
+      </div>
+      <div class="content">
+        <h2 class="title">The Rapid Visual Prototyping Process</h2>
+        <div class="flow" style="margin-bottom: 0.18in;">
+          <div class="flow-step"><strong>1</strong>Ask for three creative angles using the brief and your comments. Do not include client images unless approved.</div>
+          <div class="flow-step"><strong>2</strong>Evaluate each angle against available assets, audience fit, deadline, and brand constraints.</div>
+          <div class="flow-step"><strong>3</strong>Generate HTML layout templates for hook placement, safe zones, CTA position, and hierarchy.</div>
+          <div class="flow-step"><strong>4</strong>Add html2canvas export, save the layout as an image, and rebuild it cleanly in Photoshop.</div>
+        </div>
+        <div class="grid-3">
+          <div class="panel">
+            <div class="chat">
+              <div class="bar"><span></span><span></span><span></span></div>
+              <div class="doc">
+                <div class="bubble user">I am a designer. This is the brief and my notes. Create three angles and approaches for static ads. Static only.</div>
+                <div class="bubble ai"><strong>Angle 1:</strong> The Mirror of Confidence<br><strong>Angle 2:</strong> Defined by God, Not the World<br><strong>Angle 3:</strong> Celebrating the Crown</div>
+                <div class="bubble ai">Each angle includes a hook, visual direction, audience trigger, and layout note.</div>
+              </div>
+            </div>
+            <div class="caption">Mock AI session based on the supplied Melanie creative strategy.</div>
+          </div>
+          <div class="panel">
+            <div class="img-box medium">
+              <img class="shot" src="design-process-guide-assets/instagram-html-layout.png" alt="AI-generated HTML layout screenshot">
+              <div class="tag gold">Hook, CTA, product area, and mobile-safe hierarchy.</div>
+            </div>
+            <div class="caption">AI-generated HTML layout in browser from the Melanie artifact.</div>
+          </div>
+          <div class="panel">
+            <div class="img-box medium">
+              <img class="shot contain" src="Html2canvasexport.png" alt="html2canvas export screenshot">
+              <div class="tag bottom">Exported scaffold becomes Photoshop production reference.</div>
+            </div>
+            <div class="caption">html2canvas export: useful as a production scaffold, not final artwork.</div>
+          </div>
+        </div>
+      </div>
+      <div class="number">08</div>
+    </section>
+
+    <section class="page">
+      <div class="header">
+        <h2>Step 05</h2>
+        <div class="mark"><span class="dot"></span><span>AI Output Examples</span></div>
+      </div>
+      <div class="content">
+        <div class="kicker">Visual Showcase</div>
+        <h2 class="title">AI is a scaffold, not the finished ad.</h2>
+        <p class="lede" style="margin-bottom: 0.16in;">These examples show the useful line: AI can suggest composition, texture, or layout direction, while final art direction and production decisions stay human-led.</p>
+        <div class="gallery">
+          <div class="panel">
+            <div class="img-box"><img class="shot" src="obvious AI.png" alt="Obvious AI image generation example"></div>
+            <div class="caption"><strong>Obvious AI image gen.</strong> Use only for composition reference. Never submit as final.</div>
+          </div>
+          <div class="panel">
+            <div class="img-box"><img class="shot" src="Houston Medical/Houston_Hero_Product_Hook1_Static_Var 1.png" alt="Final composited Houston ad"></div>
+            <div class="caption"><strong>Final composited ad.</strong> Built in Photoshop using real assets and production judgment.</div>
+          </div>
+          <div class="panel">
+            <div class="img-box"><img class="shot" src="design-process-guide-assets/houston-html-artifact.png" alt="Houston HTML template artifact screenshot"></div>
+            <div class="caption"><strong>HTML template artifact.</strong> Layout structure only; copy and visuals are refined in production.</div>
+          </div>
+          <div class="panel">
+            <div class="img-box"><img class="shot" src="Houston Medical/Houston_ImmediateCash_Hook1_Static_Var 1.png" alt="Houston ad with subtle AI-generated background"></div>
+            <div class="caption"><strong>Subtle AI background.</strong> The dark Houston skyline texture is blended as a background element.</div>
+          </div>
+        </div>
+      </div>
+      <div class="number">09</div>
+    </section>
+
+    <section class="page" id="step6">
+      <div class="header">
+        <h2>Steps 06-07</h2>
+        <div class="mark"><span class="dot"></span><span>Prep & Compliance</span></div>
+      </div>
+      <div class="content grid-2">
+        <div class="text-stack" id="step6">
+          <div>
+            <div class="kicker">Step 06</div>
+            <h2 class="title">Asset Sourcing & Production Prep</h2>
+          </div>
+          <table>
+            <tbody>
+              <tr><td><strong>Product</strong></td><td>Hero shots, cutouts, scale references</td></tr>
+              <tr><td><strong>Brand</strong></td><td>Logos, colors, fonts, clearspace rules</td></tr>
+              <tr><td><strong>Support</strong></td><td>Backgrounds, icons, textures, testimonials</td></tr>
+              <tr><td><strong>Fonts</strong></td><td>Google Fonts safe. Adobe Fonts safe with CC. Check DaFont and other free sources for commercial licensing.</td></tr>
+            </tbody>
+          </table>
+          <div class="mock-window">
+            <div class="bar"><span></span><span></span><span></span></div>
+            <div class="folder">
+              <div class="folder-side"><strong>Client Folder</strong><span>Assets</span><span>Exports</span><span>Reports</span></div>
+              <div class="folder-main">
+                <div><div class="folder-icon"></div><strong>01 Client Images</strong></div>
+                <div><div class="folder-icon"></div><strong>02 Logos</strong></div>
+                <div><div class="folder-icon"></div><strong>03 Icons</strong></div>
+                <div><div class="folder-icon"></div><strong>04 Misc</strong></div>
+                <div><div class="folder-icon"></div><strong>05 PSD Masters</strong></div>
+                <div><div class="folder-icon"></div><strong>06 Exports</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-stack" id="step7">
+          <div>
+            <div class="kicker">Step 07</div>
+            <h2 class="title">Legal & Compliance Review</h2>
+          </div>
+          <p class="lede">Compliance review protects the client, the account, and the campaign. It is faster to flag a risky claim before launch than to repair a rejected ad later.</p>
+          <div class="panel panel-pad">
+            <div class="label">Review Checklist</div>
+            <div class="bullets">
+              <div>General advertising: no misleading claims, fake urgency, or unsupported promises.</div>
+              <div>Apparel and product: accurate materials, sizing, pricing, and availability.</div>
+              <div>Medical or regulated categories: confirm claims and platform restrictions.</div>
+              <div>Platform policies: Meta, TikTok, Google Ads, and any client-specific restrictions.</div>
+            </div>
+          </div>
+          <div class="pending"><strong>Pro tip:</strong> A five-minute flag with the account manager beats a rejected ad after launch.</div>
+        </div>
+      </div>
+      <div class="number">10</div>
+    </section>
+
+    <section class="page" id="step8">
+      <div class="header">
+        <h2>Step 08</h2>
+        <div class="mark"><span class="dot"></span><span>Compositing</span></div>
+      </div>
+      <div class="content">
+        <div class="grid-2" style="grid-template-columns: 0.95fr 1.05fr;">
+          <div class="text-stack">
+            <div>
+              <div class="kicker">Step 08</div>
+              <h2 class="title">Compositing — Creative Execution</h2>
+              <p class="lede"><strong>Also called:</strong> Art direction and production.</p>
+            </div>
+            <div class="bullets">
+              <div>Set up canvas at the correct platform dimensions.</div>
+              <div>Bring in comps and guides from the approved brief expansion.</div>
+              <div>Build background, product, typography, branding, and CTA in layer groups.</div>
+              <div>Fine-tune spacing, hierarchy, contrast, legibility, and safe-zone placement.</div>
+              <div>Export final flats and save the master PSD.</div>
+            </div>
+            <div class="pending">Finished ad with layer callouts is intentionally left pending for now. Drop the annotated portfolio ad here when that asset is ready.</div>
+          </div>
+          <div class="panel dark-panel">
+            <div class="panel-pad">
+              <div class="label">Mock Photoshop Layers</div>
+            </div>
+            <div class="layers">
+              <div class="layer"><span class="eye"></span><strong>00 Guides / Safe Zone</strong><span class="thumb"></span></div>
+              <div class="layer"><span class="eye"></span><strong>01 Background / Grunge Texture</strong><span class="thumb" style="background:#475569;"></span></div>
+              <div class="layer"><span class="eye"></span><strong>02 Hero Product Cutout</strong><span class="thumb" style="background:#e5e7eb;"></span></div>
+              <div class="layer"><span class="eye"></span><strong>03 Headline - Primary Hook</strong><span class="thumb" style="background:#ffffff;"></span></div>
+              <div class="layer"><span class="eye"></span><strong>04 Subhead / Proof Line</strong><span class="thumb" style="background:#a3a3a3;"></span></div>
+              <div class="layer"><span class="eye"></span><strong>05 CTA Button</strong><span class="thumb" style="background:#ff3131;"></span></div>
+              <div class="layer"><span class="eye"></span><strong>06 Logo / Brand Marks</strong><span class="thumb" style="background:#67bc45;"></span></div>
+              <div class="layer"><span class="eye"></span><strong>07 Export Checks</strong><span class="thumb" style="background:#c4a54f;"></span></div>
+            </div>
+            <div class="caption">Generic Photoshop layers panel: group layers by production role so edits stay fast.</div>
+          </div>
+        </div>
+      </div>
+      <div class="number">11</div>
+    </section>
+
+    <section class="page" id="step9">
+      <div class="header">
+        <h2>Step 09</h2>
+        <div class="mark"><span class="dot"></span><span>A/B Variation Production</span></div>
+      </div>
+      <div class="content">
+        <div class="kicker">Step 09</div>
+        <h2 class="title">A/B Variation Production</h2>
+        <p class="lede" style="max-width: 9.1in; margin-bottom: 0.14in;">Variation work tests one meaningful variable at a time. Two variants is the minimum, three to five is standard, and ten or more usually creates noise unless there is a clear testing plan.</p>
+        <div class="ad-grid">
+          <div class="panel">
+            <div class="img-box"><img class="shot" src="Houston Medical/Houston_Hero_Product_Hook1_Static_Var 1.png" alt="Houston ad variation 1"></div>
+            <div class="caption"><strong>Var 1:</strong> Control - original product hook and direct headline.</div>
+          </div>
+          <div class="panel">
+            <div class="img-box"><img class="shot" src="Houston Medical/Houston_Hero_Product_Hook1_Static_Var 2.png" alt="Houston ad variation 2"></div>
+            <div class="caption"><strong>Var 2:</strong> Headline and layout test using same core product direction.</div>
+          </div>
+          <div class="panel">
+            <div class="img-box"><img class="shot" src="Houston Medical/Houston_Hero_Product_Hook1_Static_Var 3.png" alt="Houston ad variation 3"></div>
+            <div class="caption"><strong>Var 3:</strong> Visual balance test with adjusted emphasis and hierarchy.</div>
+          </div>
+        </div>
+        <div class="panel panel-pad" style="margin-top: 0.14in;">
+          <div class="label">Naming Convention</div>
+          <p class="small" style="margin-top: 0.06in;">[Client]_[Campaign]_[AdName]_[Hook]_[Variable]_[Variant#].png</p>
+        </div>
+      </div>
+      <div class="number">12</div>
+    </section>
+
+    <section class="page" id="step10">
+      <div class="header">
+        <h2>Step 10</h2>
+        <div class="mark"><span class="dot"></span><span>Delivery Report</span></div>
+      </div>
+      <div class="content grid-2">
+        <div class="text-stack">
+          <div>
+            <div class="kicker">Step 10</div>
+            <h2 class="title">Creative Delivery Report</h2>
+            <p class="lede"><strong>Also called:</strong> Design rationale report.</p>
+          </div>
+          <p class="lede">The report is what makes the designer a strategic partner, not just a pixel pusher. It explains the choices behind the finished ads.</p>
+          <div class="bullets">
+            <div>Campaign overview and objective</div>
+            <div>Creative direction summary</div>
+            <div>Design rationale per ad</div>
+            <div>A/B variation hypothesis</div>
+            <div>Final assets and file specs</div>
+            <div>Next steps</div>
+          </div>
+          <div class="panel panel-pad">
+            <div class="label">Format Options</div>
+            <p class="small" style="margin-top: 0.07in;">Google Doc or Notion for collaboration, PDF for formal presentation, HTML page for interactive agency-grade delivery.</p>
+          </div>
+          <div class="pending">Houston report screenshot skipped as requested. This page uses the Melanie report example instead.</div>
+        </div>
+        <div class="panel">
+          <div class="img-box tall">
+            <img class="shot" src="design-process-guide-assets/melanie-report-screenshot.png" alt="Melanie design report screenshot">
+            <div class="tag right">Report example: campaign overview, final ads, rationale, and next steps.</div>
+          </div>
+          <div class="caption">Second report example from The Melanie Dolls design report.</div>
+        </div>
+      </div>
+      <div class="number">13</div>
+    </section>
+
+    <section class="page">
+      <div class="header">
+        <h2>Quick Reference</h2>
+        <div class="mark"><span class="dot"></span><span>Workflow Matrix</span></div>
+      </div>
+      <div class="content">
+        <div class="kicker">Quick Reference</div>
+        <h2 class="title">The Full Workflow at a Glance</h2>
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Stage</th>
+              <th>Key Tool</th>
+              <th>Deliverable</th>
+              <th>Can You Skip?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>01</td><td>Creative Brief Intake</td><td>Brief doc + client assets</td><td>Approved creative brief</td><td>Never</td></tr>
+            <tr><td>02</td><td>Visual Research & Moodboarding</td><td>FigJam</td><td>Moodboard</td><td>On one-hour tasks</td></tr>
+            <tr><td>03</td><td>Creative Strategy & Brief Expansion</td><td>FigJam + doc</td><td>Concept doc</td><td>On one-hour tasks</td></tr>
+            <tr><td>04</td><td>Competitive & Brand Research</td><td>Browser + notes</td><td>Brand identity profile</td><td>At your risk</td></tr>
+            <tr><td>05</td><td>Rapid Ideation with AI</td><td>Claude / ChatGPT / Gemini</td><td>Reference concepts</td><td>Optional</td></tr>
+            <tr><td>06</td><td>Asset Sourcing & Production Prep</td><td>Stock, fonts, client files</td><td>Assets collected + verified</td><td>Never</td></tr>
+            <tr><td>07</td><td>Legal & Compliance Review</td><td>Checklist</td><td>Clearance sign-off</td><td>Never</td></tr>
+            <tr><td>08</td><td>Compositing</td><td>Photoshop / Affinity</td><td>Master PSD + flat exports</td><td>Never</td></tr>
+            <tr><td>09</td><td>A/B Variation Production</td><td>Photoshop / Affinity</td><td>3-5 variants per concept</td><td>At your risk</td></tr>
+            <tr><td>10</td><td>Creative Delivery Report</td><td>Doc / PDF / HTML</td><td>Report with rationale</td><td>At your risk</td></tr>
+          </tbody>
+        </table>
+        <div class="glossary">
+          <div><strong>Plain English to Industry Term:</strong><br>Client notes = creative brief. Looking at references = moodboarding. Making ideas sharper = concept development. Checking competitors = brand audit. Making versions = A/B testing.</div>
+          <div><strong>Industry Term to Output:</strong><br>Creative direction deck = moodboard plus rationale. Brand identity profile = reusable research notes. Master file = editable PSD. Delivery report = final assets plus the reason each ad exists.</div>
+        </div>
+      </div>
+      <div class="number">14</div>
+    </section>
+
+    <footer>
+      <section class="page dark">
+        <div class="back-center">
+          <h2>This Process Is Modular.</h2>
+          <p>On a tight deadline, steps 2-4 can be condensed. On a new client, you may spend extra time on steps 4 and 7. The order matters because each step feeds the next. Skip a step at your own risk, but know the skipped step usually returns as a revision or a problem later.</p>
+          <p style="margin-top: 0.32in; font-size: 0.13in;">Geofrey Gapasin / Static Ad Creative Process Guide / 2026</p>
+        </div>
+        <div class="number">15</div>
+      </section>
+    </footer>
+  </article>
+  </main>
+</body>
+
+</html>
