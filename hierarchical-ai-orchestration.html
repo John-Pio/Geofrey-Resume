@@ -12,11 +12,11 @@
   <meta property="og:title" content="Hierarchical LLM Orchestration: How to Build Complex Systems Using Only Free-Tier AI | Geofrey Gapasin">
   <meta property="og:description" content="A case study on Hierarchical LLM Orchestration: how to bootstrap complex software projects using a multi-LLM organizational hierarchy to bypass rate limits and costs on free-tier AI.">
   <meta property="og:url" content="https://john-pio.github.io/Geofrey-Resume/hierarchical-ai-orchestration.html">
-  <meta property="og:image" content="https://john-pio.github.io/Geofrey-Resume/img/geofrey-gapasin.jpg">
+  <meta property="og:image" content="https://john-pio.github.io/Geofrey-Resume/img/og-hierarchical-ai-orchestration.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hierarchical LLM Orchestration: How to Build Complex Systems Using Only Free-Tier AI | Geofrey Gapasin">
   <meta name="twitter:description" content="A case study on Hierarchical LLM Orchestration: how to bootstrap complex software projects using a multi-LLM organizational hierarchy.">
-  <meta name="twitter:image" content="https://john-pio.github.io/Geofrey-Resume/img/geofrey-gapasin.jpg">
+  <meta name="twitter:image" content="https://john-pio.github.io/Geofrey-Resume/img/og-hierarchical-ai-orchestration.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,7 +30,7 @@
     },
     "publisher": { "@type": "Person", "name": "Geofrey Gapasin" },
     "datePublished": "2026-06-27",
-    "dateModified": "2026-06-27",
+    "dateModified": "2026-06-30",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://john-pio.github.io/Geofrey-Resume/hierarchical-ai-orchestration.html"
@@ -38,6 +38,17 @@
     "keywords": "Hierarchical LLM Orchestration, multi-LLM routing, agentic task cascading, free-tier AI, AI bootstrapping",
     "articleSection": "AI & Software Orchestration",
     "inLanguage": "en-US"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://john-pio.github.io/Geofrey-Resume/" },
+      { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://john-pio.github.io/Geofrey-Resume/work.html" },
+      { "@type": "ListItem", "position": 3, "name": "Hierarchical LLM Orchestration", "item": "https://john-pio.github.io/Geofrey-Resume/hierarchical-ai-orchestration.html" }
+    ]
   }
   </script>
   <link rel="stylesheet" href="style.css">
@@ -50,6 +61,17 @@
       font-family: 'Space Mono', 'Courier New', monospace;
       margin: 0;
       line-height: 1.7;
+    }
+    /* ── Reading Progress Bar ── */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, #f5c400, #4ecdc4);
+      z-index: 1100;
+      transition: width 0.1s linear;
     }
     .site-article-header {
       position: sticky;
@@ -163,7 +185,7 @@
     p { color: #cfc9bc; margin: 0 0 1.2rem; font-size: 0.92rem; }
     a { color: #4ecdc4; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    
+
     .step-block {
       background: #111;
       border: 1px solid #2a2a2a;
@@ -176,7 +198,7 @@
     .step-block li { margin-bottom: 0.4rem; }
     .step-block li:last-child { margin-bottom: 0; }
     .step-block p { margin: 0.5rem 0 0; font-size: 0.88rem; }
-    
+
     .callout {
       background: rgba(245,196,0,0.08);
       border: 1px dashed rgba(245,196,0,0.4);
@@ -185,6 +207,43 @@
       font-size: 0.88rem;
       color: #e5d49d;
     }
+
+    /* ── Example Prompt Callout ── */
+    .prompt-callout {
+      background: #0d0d0d;
+      border: 1px solid #2a2a2a;
+      border-left: 3px solid #4ecdc4;
+      margin: 1.2rem 0;
+      overflow: hidden;
+    }
+    .prompt-callout-label {
+      display: block;
+      background: rgba(78,205,196,0.1);
+      padding: 0.5rem 1rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #4ecdc4;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .prompt-callout pre {
+      margin: 0;
+      padding: 1rem 1.2rem;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .prompt-callout pre code {
+      background: transparent;
+      color: #cfc9bc;
+      padding: 0;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
     pre {
       background: #111;
       border: 1px solid #2a2a2a;
@@ -229,13 +288,208 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
+
+    /* ── Table of Contents ── */
+    .article-toc {
+      background: #111;
+      border: 1px solid #2a2a2a;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .article-toc-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #f5c400;
+      margin: 0 0 0.75rem;
+    }
+    .article-toc ol {
+      margin: 0;
+      padding-left: 1.2rem;
+      list-style-type: decimal;
+    }
+    .article-toc li {
+      margin-bottom: 0.35rem;
+    }
+    .article-toc a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .article-toc a:hover {
+      color: #4ecdc4;
+    }
+
+    /* ── Site Footer ── */
+    .site-footer {
+      background: #0a0a0a;
+      border-top: 1px solid #2a2a2a;
+      padding: 3rem 1.25rem 2rem;
+      margin-top: 0;
+    }
+    .site-footer-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .site-footer-col h4 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #f5c400;
+      margin: 0 0 0.75rem;
+    }
+    .site-footer-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .site-footer-col li {
+      margin-bottom: 0.4rem;
+    }
+    .site-footer-col a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+    }
+    .site-footer-col a:hover {
+      color: #4ecdc4;
+    }
+    .site-footer-copy {
+      width: 100%;
+      text-align: center;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #1a1a1a;
+      font-size: 0.7rem;
+      color: #555;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Results Block ── */
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .result-card {
+      background: #111;
+      border: 1px solid #2a2a2a;
+      padding: 1rem 1.2rem;
+    }
+    .result-card strong {
+      color: #4ecdc4;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .result-card p {
+      margin: 0;
+      font-size: 0.85rem;
+    }
+
     @media (max-width: 600px) {
       .portfolio-back-nav { flex-direction: column; align-items: flex-start; }
       .site-article-inner { flex-direction: column; align-items: flex-start; }
+      .results-grid { grid-template-columns: 1fr; }
+      .site-footer-inner { flex-direction: column; }
+    }
+    .hierarchy-diagram {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem 0;
+      padding: 2rem 1rem;
+      background: #0d0d0d;
+      border: 1px solid #2a2a2a;
+    }
+    .hierarchy-node {
+      width: 100%;
+      max-width: 360px;
+      background: #161616;
+      border: 1px solid #333;
+      border-left: 4px solid #f5c400;
+      padding: 0.9rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.2rem;
+    }
+    .hierarchy-node--worker {
+      border-left-color: #4ecdc4;
+    }
+    .hierarchy-num {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: #f5c400;
+    }
+    .hierarchy-node--worker .hierarchy-num { color: #4ecdc4; }
+    .hierarchy-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #f0ede8;
+    }
+    .hierarchy-tool {
+      font-size: 0.78rem;
+      color: #888;
+    }
+    .hierarchy-link {
+      position: relative;
+      height: 2.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hierarchy-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      background: #3a3a3a;
+    }
+    .hierarchy-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 7px solid #3a3a3a;
+    }
+    .hierarchy-link span {
+      position: relative;
+      background: #0d0d0d;
+      padding: 0.15rem 0.6rem;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #4ecdc4;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress" id="reading-progress"></div>
+
   <header class="site-article-header">
     <div class="site-article-inner">
       <a class="site-brand" href="index.html">Geofrey Gapasin</a>
@@ -255,14 +509,27 @@
     </header>
 
     <article>
-      <div class="article-meta">Geofrey Gapasin &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; 5 min read</div>
+      <div class="article-meta">Geofrey Gapasin &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; 7 min read</div>
       <h1>Hierarchical LLM Orchestration: How to Build Complex Systems Using Only Free-Tier AI</h1>
 
       <p class="lede">
         Bootstrapping complex software systems within strict API rate limits requires a highly strategic engineering approach. By implementing <strong>Hierarchical LLM Orchestration</strong> (also known as <strong>"Multi-LLM Hierarchical Routing"</strong> or <strong>"Agentic Task Cascading"</strong>), developers can utilize high-reasoning models as system architects while routing high-volume, modular development tasks to free-tier and low-cost worker agents.
       </p>
 
-      <h2>The Challenge: Token Poverty in the AI Era</h2>
+      <!-- Table of Contents -->
+      <nav class="article-toc" aria-label="Table of Contents">
+        <p class="article-toc-title">In This Article</p>
+        <ol>
+          <li><a href="#challenge">The Challenge: Token Poverty in the AI Era</a></li>
+          <li><a href="#hierarchy">The Multi-LLM Organizational Hierarchy</a></li>
+          <li><a href="#workflow">Step-by-Step Orchestration Workflow</a></li>
+          <li><a href="#safety-nets">Safety Nets: Commit-Per-Edit Git Versioning</a></li>
+          <li><a href="#results">What I Built With This Approach</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="challenge">The Challenge: Token Poverty in the AI Era</h2>
       <p>
         Building a complex Software-as-a-Service (SaaS) platform requires a massive volume of code generation. While state-of-the-art Large Language Models (LLMs) like Anthropic Sonnet 4.6 or OpenAI GPT-4o are incredibly capable, their commercial interfaces lock developers behind strict rate limits or costly paywalls.
       </p>
@@ -273,47 +540,51 @@
         However, by treating different AI models not as standalone tools, but as an <strong>integrated organizational hierarchy</strong>, you can build enterprise-grade software on completely free resources. This case study breaks down how I orchestrated multiple free-tier AIs to design and implement complex backend systems (such as a multi-provider Tool Calling architecture).
       </p>
 
-      <h2>The Multi-LLM Organizational Hierarchy</h2>
+      <h2 id="hierarchy">The Multi-LLM Organizational Hierarchy</h2>
       <p>
         To bypass rate limits without losing code quality, I mapped out an industry-standard corporate structure using distinct AI models:
       </p>
 
-      <pre><code>              ┌────────────────────────┐
-              │  1. THE ARCHITECT      │
-              │  (Gemini Live/Sonnet)  │
-              └───────────┬────────────┘
-                          │ (Refined Scope)
-                          ▼
-              ┌────────────────────────┐
-              │  2. THE PROJECT MGR    │
-              │  (Sonnet 4.6 / Claude) │
-              └───────────┬────────────┘
-                          │ (Modular Breakdown)
-                          ▼
-              ┌────────────────────────┐
-              │  3. THE CODE RUNNERS   │
-              │ (Google AI Studio Key) │
-              └───────────┬────────────┘
-                          │ (System State Sync)
-                          ▼
-              ┌────────────────────────┐
-              │  4. THE WORKER BEES    │
-              │ (Cline + DeepSeek /    │
-              │  GitHub Copilot Free)  │
-              └────────────────────────┘</code></pre>
+      <div class="hierarchy-diagram">
+        <div class="hierarchy-node">
+          <span class="hierarchy-num">1</span>
+          <span class="hierarchy-title">The Architect</span>
+          <span class="hierarchy-tool">Gemini Live / Sonnet</span>
+        </div>
+        <div class="hierarchy-link"><span>Refined Scope</span></div>
+        <div class="hierarchy-node">
+          <span class="hierarchy-num">2</span>
+          <span class="hierarchy-title">The Project Manager</span>
+          <span class="hierarchy-tool">Sonnet 4.6 / Claude</span>
+        </div>
+        <div class="hierarchy-link"><span>Scoped Task Docs</span></div>
+        <div class="hierarchy-node">
+          <span class="hierarchy-num">3</span>
+          <span class="hierarchy-title">The Code Runners</span>
+          <span class="hierarchy-tool">Google AI Studio Key</span>
+        </div>
+        <div class="hierarchy-link"><span>Full Task Doc Hand-off</span></div>
+        <div class="hierarchy-node hierarchy-node--worker">
+          <span class="hierarchy-num">4</span>
+          <span class="hierarchy-title">The Worker Bees</span>
+          <span class="hierarchy-tool">Cline + DeepSeek / GitHub Copilot Free</span>
+        </div>
+      </div>
 
-      <h2>Step-by-Step Orchestration Workflow</h2>
+      <h2 id="workflow">Step-by-Step Orchestration Workflow</h2>
 
       <h3>Step 1: Voice-to-Task Transcription &amp; Refinement (The Input)</h3>
       <div class="step-block">
         <strong>Refining unstructured inputs</strong>
         <ul>
           <li><strong>The Tool:</strong> Google Gemini (High contextual understanding for live text processing).</li>
-          <li><strong>The Action:</strong> Feed raw transcription or audio dumps directly into Gemini with a strict guardrail prompt:
-            <blockquote>"This is a raw transcription of system requirements. Turn it into clean, actionable, written technical tasks. Ask me clarifying questions one by one for any ambiguities. Do not make up or assume any features."</blockquote>
-          </li>
+          <li><strong>The Action:</strong> Feed raw transcription or audio dumps directly into Gemini with a strict guardrail prompt.</li>
           <li><strong>The Outcome:</strong> A highly accurate, finalized requirements doc ready to hand over to a client or stakeholder for final sign-off before a single line of code is written.</li>
         </ul>
+      </div>
+      <div class="prompt-callout">
+        <span class="prompt-callout-label">Example Prompt — Step 1</span>
+        <pre><code>This is a raw transcription of system requirements. Turn it into clean, actionable, written technical tasks. Ask me clarifying questions one by one for any ambiguities. Do not make up or assume any features.</code></pre>
       </div>
 
       <h3>Step 2: Architecture Design &amp; System Mapping (The Architect)</h3>
@@ -325,22 +596,73 @@
           <li><strong>The Outcome:</strong> A comprehensive master blueprint file (e.g., <code>SEO-PLAN.md</code> or <code>SYSTEM-ARCHITECTURE.md</code>).</li>
         </ul>
       </div>
+      <div class="prompt-callout">
+        <span class="prompt-callout-label">Example Prompt — Step 2</span>
+        <pre><code>Here are the finalized requirements for [feature/milestone]: [paste refined requirements doc].
+
+Act as lead system architect. Produce a complete technical blueprint covering data models, API endpoints, service boundaries, and key architectural decisions with tradeoffs.
+
+Flag any requirements that are ambiguous or conflicting before proceeding. Output as a single markdown document I can save as SYSTEM-ARCHITECTURE.md.</code></pre>
+      </div>
 
       <h3>Step 3: Modularization (The Project Manager)</h3>
       <div class="step-block">
-        <strong>Decomposing macros into atomic sub-tasks</strong>
+        <strong>Decomposing the blueprint into self-contained task documents</strong>
         <ul>
           <li><strong>The Tool:</strong> Sonnet 4.6 (before lockout) or an advanced fallback proxy like CodeX.</li>
-          <li><strong>The Action:</strong> Instruct the model to slice the macro blueprint into hyper-focused, atomic developer tasks (e.g., <em>Task 1: Build Data Models</em>, <em>Task 2: Implement Interface</em>, etc.).</li>
+          <li><strong>The Action:</strong> Rather than handing the worker model a one-line task title, instruct the model to generate a full markdown task document per unit of work — each one containing the goal, project context, the <em>current</em> state of the file(s) being touched, the <em>target</em> state with full code, a verification command, and explicit dependencies on prior tasks. This is what actually carries the "memory" forward — not a vague instruction, but the literal before/after code.</li>
+          <li><strong>Scope is a dial, not a fixed rule:</strong> a "task" can be as small as a single function or as large as an entire backend layer (models, or store + service, or a full API handler) — whatever fits in one focused worker session without drifting. State your preferred scope explicitly in the prompt.</li>
         </ul>
+      </div>
+      <div class="prompt-callout">
+        <span class="prompt-callout-label">Example Prompt — Step 3</span>
+        <pre><code>Here is the system architecture: [paste SYSTEM-ARCHITECTURE.md].
+
+Break this into a numbered sequence of standalone task documents, scoped at the level of [a single function / one full file / one backend layer — pick what fits].
+
+For each task, produce a markdown file with these sections:
+- Goal
+- Project Context (paths, namespaces, conventions)
+- Prerequisites (which prior tasks must be done)
+- What to Do (show the CURRENT file content if it exists, then the TARGET file content in full)
+- Verification (the exact build/test command to run)
+- Dependencies
+
+Each task must be self-contained enough that a worker model with zero other context could implement it correctly.</code></pre>
       </div>
 
       <h3>Step 4: Establishing a "Source of Truth" State</h3>
       <p>
-        Inferior models have poor long-term memory. If they write Task 2 blindly, they will overwrite or break the dependencies from Task 1.
+        Inferior models have poor long-term memory. If they write Task 3 blindly, they will overwrite or break the dependencies from Tasks 1 and 2. The inline current/target code in each task document (Step 3) covers a single greenfield feature well, but once a system has been live across many sessions, a single living reference file scales better than re-pasting code into every task.
+      </p>
+      <p>
+        <strong>This is the most critical step in the entire workflow.</strong> Without it, every session starts from scratch. With it, your system accumulates institutional knowledge across dozens of agent sessions — even when the agent itself has zero memory of prior work.
+      </p>
+      <p>
+        The key insight is that state management for stateless agents mirrors state management for stateless web servers: you externalize the state. In traditional architecture, you move session data to a database. In LLM orchestration, you move project state to a living markdown file that gets injected into every session's context window.
       </p>
       <div class="callout">
-        <strong>The Strategy:</strong> Before passing a sub-task to a high-limit free model, use your smart model to write an explicit markdown tracking file for the specific feature. This file documents the exact endpoints, database schemas, and data structures. It functions as the short-term memory anchor for the worker AI.
+        <strong>The Strategy:</strong> For an existing codebase, the source of truth isn't generated fresh per task — it's a single, living "system guide" file (e.g. <code>CONVERSATION_SYSTEM_COMPLETE_GUIDE.md</code>) that your smart model writes once, summarizing the architecture: module map, data flow, key data structures, current implementation status per phase, known issues, and quick console-testable checks. Every worker task pastes the relevant section of this file as context. Critically, the guide also carries instructions for the AI itself: after finishing a task, update the guide's status section and append what was done, so the next session inherits an accurate picture instead of a stale one.
+      </div>
+      <p>
+        What makes this work is the <strong>self-updating instruction</strong>. The guide doesn't just describe the system — it tells the agent to modify the guide after completing work. This creates a feedback loop: every completed task enriches the context available to the next task. Over the course of a project, the guide evolves from a skeleton outline into a comprehensive, battle-tested reference document — essentially a form of institutional memory that persists across completely independent, stateless agent sessions.
+      </p>
+      <div class="prompt-callout">
+        <span class="prompt-callout-label">Example Prompt — Step 4</span>
+        <pre><code>Here is the current state of [system name]: [paste relevant code/files or describe what exists].
+
+Write a comprehensive implementation guide for this system covering:
+- Executive summary
+- Module/file architecture
+- Step-by-step data flow
+- Key data structures
+- Current implementation status broken into phases (complete / in-progress / planned)
+- Known issues
+- Quick browser-console or build commands to validate behavior
+
+At the end, add an "AI Agent Update Instructions" section telling future sessions to:
+1. Read the relevant phase before starting
+2. Update this guide's status and a dated changelog entry after completing any task</code></pre>
       </div>
 
       <h3>Step 5: Execution via the "Worker Bees" (The Construction)</h3>
@@ -348,15 +670,21 @@
         <strong>High-volume modular code generation</strong>
         <ul>
           <li><strong>The Tools:</strong> Cline (VS Code Extension) utilizing free DeepSeek Flash models, standalone Google AI Studio API Keys, or GitHub Copilot free trials.</li>
-          <li><strong>The Action:</strong> Pass the worker model <strong>one</strong> isolated modular task combined with the <em>Source of Truth State file</em>. Because these models have vast free quotas or low API costs, they can write hundreds of lines of code without budget constraints.</li>
+          <li><strong>The Action:</strong> Pass the worker model <strong>one</strong> task document in full — current code, target code, verification command, and all. Because these models have vast free quotas or low API costs, they can write hundreds of lines of code without budget constraints.</li>
         </ul>
+      </div>
+      <div class="prompt-callout">
+        <span class="prompt-callout-label">Example Prompt — Step 5</span>
+        <pre><code>Here is task_03_api_handler.md in full: [paste the entire task document].
+
+Implement everything in the "What to Do" section exactly as specified. Do not touch any files outside the ones listed. When finished, run the verification command and confirm it passes before reporting back.</code></pre>
       </div>
 
       <div class="callout">
         <strong>Pro-Tip:</strong> Always use browser-based frontier web apps to stress-test your prompt structures and handle deep-dive architectural discussions before piping them into automated IDE workers.
       </div>
 
-      <h2>Safety Nets: Commit-Per-Edit Git Versioning</h2>
+      <h2 id="safety-nets">Safety Nets: Commit-Per-Edit Git Versioning</h2>
       <p>
         Because free-tier "worker" LLMs are prone to logic degradation or hallucinations over long sessions, a bulletproof version control strategy is required:
       </p>
@@ -365,16 +693,87 @@
         <li><strong>The Rollback Loop:</strong> If a worker model introduces a breaking regression or loops destructively on a bug, do not waste tokens trying to get it to debug itself. Instantly run <code>git reset --hard HEAD~1</code> to wipe the error, re-prime the prompt with stricter boundaries, and try again.</li>
       </ul>
 
-      <h2>Conclusion</h2>
+      <h2 id="results">What I Built With This Approach</h2>
+      <p>
+        This isn't a theoretical framework — it's the exact workflow I used to build and ship real projects. Here's what came out of Hierarchical LLM Orchestration in practice:
+      </p>
+      <div class="results-grid">
+        <div class="result-card">
+          <strong>Portfolio Site</strong>
+          <p>This entire portfolio — including the <a href="process-guide.html">10-step process guide</a>, all article pages, dynamic project galleries, and SEO infrastructure — was designed and implemented using this hierarchy.</p>
+        </div>
+        <div class="result-card">
+          <strong>SEO Content Pipeline</strong>
+          <p>Five long-form articles with full structured data, sitemap integration, and content clustering — all orchestrated from architecture to execution across free-tier models.</p>
+        </div>
+        <div class="result-card">
+          <strong>Total API Cost</strong>
+          <p>$0.00. Every model used — Gemini, Claude free tier, DeepSeek, GitHub Copilot — was accessed within free usage limits.</p>
+        </div>
+        <div class="result-card">
+          <strong>Key Metric</strong>
+          <p>Each "worker" session averaged 200-400 lines of code per task document. The Architect step was invoked once per major milestone, consuming < 5% of total interactions.</p>
+        </div>
+      </div>
+      <p>
+        The throughput advantage is real: because worker-tier models handle 90%+ of the raw code generation volume, the expensive reasoning models are preserved exclusively for decisions that actually require them — system design, dependency mapping, and failure-mode analysis.
+      </p>
+
+      <h2 id="conclusion">Conclusion</h2>
       <p>
         You do not need a multi-million dollar venture capital runway to build an advanced, production-grade SaaS product in 2026. By utilizing <strong>Hierarchical LLM Orchestration</strong>, you can substitute capital with smart routing—leveraging premium models for vision and planning, while keeping production costs at exactly $0.00.
       </p>
 
       <div class="article-footer-links">
         <a href="ai-tools-static-ad-production.html">&larr; How I Used AI Tools to Speed Up Production</a>
-        <a href="work.html">View other projects &rarr;</a>
+        <a href="seo-portfolio-lessons.html">SEO Lessons From This Portfolio &rarr;</a>
+        <a href="static-ad-creative-checklist.html">Ad Creative Checklist &rarr;</a>
+        <a href="work.html">View all projects &rarr;</a>
       </div>
     </article>
   </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="site-footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="site-footer-col">
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="process-guide.html">Static Ad Process Guide</a></li>
+          <li><a href="ai-tools-static-ad-production.html">AI Tools for Ad Production</a></li>
+          <li><a href="seo-portfolio-lessons.html">SEO Portfolio Lessons</a></li>
+          <li><a href="static-ad-creative-checklist.html">Ad Creative Checklist</a></li>
+        </ul>
+      </div>
+      <div class="site-footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/geofrey-gapasin/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/John-Pio" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:geofreygapasin@gmail.com">Email</a></li>
+        </ul>
+      </div>
+      <p class="site-footer-copy">&copy; 2026 Geofrey Gapasin. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Reading progress bar
+    window.addEventListener('scroll', function() {
+      var bar = document.getElementById('reading-progress');
+      var scrollTop = window.scrollY || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = progress + '%';
+    });
+  </script>
 </body>
 </html>
